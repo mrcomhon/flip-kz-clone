@@ -1,0 +1,1 @@
+store/ (или context/) — глобальное состояние приложения: Redux Toolkit, MobX или React Context.
