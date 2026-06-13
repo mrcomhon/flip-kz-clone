@@ -3,8 +3,8 @@ import logo from '../../../assets/icons/logo.svg'
 
 function Header() {
   return (
-    <header>
-      <nav>
+    <header className={styles.header}>
+      <nav className={`${styles.navigation} container`}>
         <div className={styles.logoWrapper}>
           <a href="/" alt="Home-page">
             <img
@@ -13,6 +13,7 @@ function Header() {
               width="60px"
               height=""
               loading="lazy"
+              className={styles.logo}
             />
           </a>
           <div>Location</div>

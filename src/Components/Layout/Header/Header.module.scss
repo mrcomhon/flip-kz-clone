@@ -1,3 +1,9 @@
-.logoWrapper {
-  background-color: blue;
+.navigation {
+  display: flex;
+  background-color: var(--color-blue-1);
 }
+
+.logo {
+  width: toRem(62);
+}
+
