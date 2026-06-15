@@ -34,7 +34,7 @@ function Header() {
             type="search"
             id="search"
             name="search"
-            placeholder="Поиск на FlipClone: 1 000 000 товаров"
+            placeholder="Поиск на Flip: 1 000 000 товаров"
           />
           <button
             className={styles.buttonSearch}

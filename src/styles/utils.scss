@@ -1,5 +1,13 @@
 @use 'helpers' as *;
 
+body {
+  font-family: 'Goloss', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
