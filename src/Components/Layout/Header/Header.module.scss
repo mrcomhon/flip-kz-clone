@@ -7,12 +7,27 @@
   background-color: var(--color-blue-light);
   align-items: center;
   gap: toRem(16);
+
+  @include laptop {
+    max-width: 100%;
+    padding-inline: calc(var(--container-padding-x) / 2);
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+    gap: toRem(4);
+    justify-content: space-between;
+  }
 }
 
 .logoWrapper {
   display: flex;
   align-items: center;
   gap: toRem(20);
+
+  @include laptop {
+    gap: toRem(8);
+  }
 }
 
 .logo {
@@ -32,8 +47,11 @@
   &:hover {
     background-color: var(--color-blue-grand);
   }
-}
 
+  @include tablet {
+    order: 4;
+  }
+}
 
 
 .city {
@@ -51,6 +69,11 @@
   padding-block: toRem(8);
   flex-grow: 1;
   min-width: 0;
+
+  @include tablet {
+    width: 100%;
+    order: 3;
+  }
 }
 
 .searchForm {
@@ -78,7 +101,7 @@
 .buttonSearch {
   cursor: pointer;
   width: toRem(50);
-  height:toRem(36);
+  height: toRem(36);
   background-color: var(--color-yellow-brand);
   border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
   border: none;
@@ -89,6 +112,10 @@
 .userMenu {
   display: flex;
   gap: toRem(32);
+
+  @include laptop {
+    gap: toRem(8);
+  }
 }
 
 .cart {
@@ -101,6 +128,12 @@
 
   &:hover {
     background-color: var(--color-blue-grand);
+  }
+}
+
+.cartExtra {
+  @include tablet{
+    display: none;
   }
 }
 
