@@ -1,8 +1,9 @@
 import styles from './Header.module.scss'
 import logo from '../../../assets/icons/logo.svg'
-import search from '../../../assets/icons/search.svg'
 import cart from '../../../assets/icons/cart.svg'
 import favorite from '../../../assets/icons/favourite.svg'
+
+import SearchBar from "@/Components/UI/SearchBar/SearchBar";
 
 function Header() {
   return (
@@ -38,34 +39,7 @@ function Header() {
             </div>
           </div>
         </div>
-        <div className={styles.searchBar}>
-          <form
-            action="/search"
-            name="search"
-            className={styles.searchForm}
-          >
-            <input
-              className={styles.searchInput}
-              type="search"
-              id="search"
-              name="search"
-              placeholder="Поиск на Flip: 1 000 000 товаров"
-            />
-            <button
-              className={styles.buttonSearch}
-              title="Поиск"
-              type="submit"
-            >
-              <img
-                src={search}
-                alt="search"
-                width=""
-                height=""
-                loading="lazy"
-              />
-            </button>
-          </form>
-        </div>
+      <SearchBar />
         <div className={styles.userMenu}>
           <a className={styles.cart}>
             <img

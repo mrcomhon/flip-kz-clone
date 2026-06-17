@@ -1,0 +1,43 @@
+.searchBar {
+  padding-block: toRem(8);
+  flex-grow: 1;
+  min-width: 0;
+
+  @include tablet {
+    width: 100%;
+    order: 3;
+  }
+}
+
+.searchForm {
+  display: flex;
+}
+
+.searchInput {
+  flex-grow: 1;
+  min-width: 0;
+  padding: toRem(4) toRem(16);
+  border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+  border: none;
+
+  &::placeholder {
+    font-size: toRem(14);
+    line-height: toRem(20);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.buttonSearch {
+  cursor: pointer;
+  width: toRem(50);
+  height: toRem(36);
+  background-color: var(--color-yellow-brand);
+  border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+  border: none;
+
+  @include flex-center();
+}
