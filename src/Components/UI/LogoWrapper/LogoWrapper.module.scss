@@ -11,32 +11,3 @@
 .logo {
   width: toRem(62);
 }
-
-.location {
-  display: flex;
-  flex-direction: column;
-  transition-duration: var(--transition-duration);
-  cursor: pointer;
-  justify-content: center;
-  height: 100%;
-  padding: toRem(12) toRem(6);
-  gap: toRem(2);
-
-  &:hover {
-    background-color: var(--color-blue-grand);
-  }
-
-  @include tablet {
-    order: 4;
-  }
-}
-
-.city {
-  padding-left: toRem(18);
-}
-
-.gapRow {
-  display: flex;
-  align-items: center;
-  gap: toRem(4);
-}
