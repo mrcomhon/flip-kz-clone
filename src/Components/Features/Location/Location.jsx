@@ -2,9 +2,9 @@ import location from '../../../assets/icons/location.svg'
 
 import styles from "./Location.module.scss";
 
-function Location() {
+function Location({className}) {
   return (
-    <div className={styles.location}>
+    <div className={`${styles.location} ${className}`}>
       <div className={`${styles.city} p300`}>Астана</div>
       <div className={styles.gapRow}>
         <img

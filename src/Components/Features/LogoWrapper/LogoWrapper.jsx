@@ -3,11 +3,11 @@ import Location from "@/Components/Features/Location/Location";
 import Logo from "@/Components/Features/Logo/Logo";
 
 
-function LogoWrapper() {
+function LogoWrapper({LogoClass, LocationClass}) {
   return (
     <div className={styles.logoWrapper}>
-      <Logo />
-      <Location />
+      <Logo className={LogoClass}/>
+      <Location className={LocationClass}/>
     </div>
   )
 }

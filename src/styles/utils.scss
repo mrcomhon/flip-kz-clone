@@ -30,6 +30,18 @@ body {
   }
 }
 
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
 .p300 {
   font-size: toRem(11);
   line-height: toRem(12);

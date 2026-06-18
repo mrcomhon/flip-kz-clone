@@ -8,7 +8,7 @@
   padding: toRem(12) toRem(6);
   gap: toRem(2);
 
-  &:hover {
+  @include hover{
     background-color: var(--color-blue-grand);
   }
 

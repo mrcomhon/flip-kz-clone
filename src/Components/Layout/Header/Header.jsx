@@ -7,9 +7,14 @@ function Header() {
   return (
     <header className={styles.header}>
       <nav className={`${styles.navigation} container`}>
-      <LogoWrapper />
+        <div className={styles.desktopLocation}>
+         <LogoWrapper LocationClass="hidden-tablet"/>
+        </div>
       <SearchBar />
       <UserMenu />
+        <div className={styles.mobileLocation}>
+          <LogoWrapper LocationClass="visible-tablet" LogoClass="visually-hidden"/>
+        </div>
       </nav>
     </header>
   )

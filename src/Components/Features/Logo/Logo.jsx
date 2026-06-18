@@ -1,15 +1,16 @@
 import logo from "../../../assets/icons/logo.svg"
 import styles from "@/Components/Features/Logo/Logo.module.scss";
 
-function Logo() {
+function Logo({className}) {
   return (
     <a
       href="/public"
       alt="Home-page"
+      className={className}
     >
       <img
         src={logo}
-        alt=""
+        alt="FlipClone.kz"
         width="60px"
         height=""
         loading="lazy"
