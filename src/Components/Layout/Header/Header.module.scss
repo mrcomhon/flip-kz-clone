@@ -3,6 +3,23 @@
   color: var(--color-light);
 }
 
+.desktopHeader {
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobileHeader {
+  @include tablet-above {
+    display: none;
+  }
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation {
   display: flex;
   background-color: var(--color-blue-light);
@@ -13,10 +30,16 @@
     max-width: 100%;
     padding-inline: calc(var(--container-padding-x) / 2);
   }
+}
 
-  @include tablet {
-    flex-wrap: wrap;
-    gap: toRem(4);
-    justify-content: space-between;
+.mobileNavigation {
+  display: column;
+  background-color: var(--color-blue-light);
+  align-items: center;
+  gap: toRem(16);
+
+  @include laptop {
+    max-width: 100%;
+    padding-inline: calc(var(--container-padding-x) / 2);
   }
 }

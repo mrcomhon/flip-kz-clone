@@ -3,10 +3,7 @@
   flex-grow: 1;
   min-width: 0;
 
-  @include tablet {
-    width: 100%;
-    order: 3;
-  }
+
 }
 
 .searchForm {

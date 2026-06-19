@@ -32,7 +32,7 @@ function UserMenu() {
           <input
             id="kz"
             name="lang"
-            value="kk"
+            value="kz"
             type="radio"
           />
           <label htmlFor="kz">Қаз</label>
