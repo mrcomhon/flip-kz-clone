@@ -57,22 +57,3 @@
     cursor: pointer;
   }
 }
-
-.authHover {
-  display: flex;
-  align-items: center;
-
-  @include hover{
-    background-color: var(--color-blue-grand);
-    transition-duration: var(--transition-duration);
-
-  }
-}
-
-.auth {
-  display: flex;
-  flex-direction: column;
-  gap: toRem(4);
-  padding: toRem(8);
-  cursor: pointer;
-}

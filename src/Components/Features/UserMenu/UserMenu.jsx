@@ -1,6 +1,7 @@
 import cart from '../../../assets/icons/cart.svg'
 import favorite from '../../../assets/icons/favourite.svg'
 import styles from './UserMenu.module.scss'
+import Auth from "@/Components/Features/Auth/Auth";
 
 function UserMenu() {
   return (
@@ -46,12 +47,7 @@ function UserMenu() {
           <label htmlFor="ru">Рус</label>
         </div>
       </div>
-      <div className={styles.authHover}>
-        <a className={styles.auth}>
-          <div className="p500">Войти</div>
-          <div className="p300">Мой раздел</div>
-        </a>
-      </div>
+      <Auth />
     </div>
   )
 }
