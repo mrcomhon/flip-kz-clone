@@ -5,7 +5,7 @@ function Logo({className}) {
   return (
     <a
       href="/public"
-      alt="Home-page"
+      title="Home-page"
       className={className}
     >
       <img

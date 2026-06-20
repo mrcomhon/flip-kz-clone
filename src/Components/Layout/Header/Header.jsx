@@ -8,9 +8,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
         <nav className={`${styles.navigation} container`}>
-          <div className={styles.desktopLocation}>
-            <LogoWrapper LocationClass="hidden-tablet" />
-          </div>
+          <LogoWrapper LocationClass="hidden-tablet" />
           <SearchBar />
           <UserMenu />
         </nav>
