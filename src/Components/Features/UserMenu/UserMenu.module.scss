@@ -25,35 +25,3 @@
     display: none;
   }
 }
-
-.langSwitcherWrapper {
-  display: flex;
-  align-items: center;
-}
-
-.langSwitcher {
-  display: flex;
-  background: rgba(255, 255, 255, .1);
-  padding: toRem(4);
-  gap: toRem(4);
-  align-items: center;
-  border-radius: toRem(80);
-
-  input {
-    display: none;
-
-    &:checked + label {
-      color: var(--color-blue-grand);
-      background-color: var(--color-light);
-    }
-  }
-
-  label {
-    border-radius: toRem(80);
-    line-height: toRem(16);
-    font-size: toRem(12);
-    padding: toRem(4) toRem(8);
-    transition-duration: var(--transition-duration);
-    cursor: pointer;
-  }
-}

@@ -1,6 +1,7 @@
 import cart from '../../../assets/icons/cart.svg'
 import favorite from '../../../assets/icons/favourite.svg'
 import styles from './UserMenu.module.scss'
+import LangSwitcher from "@/Components/Features/LanguageSwitcher/LangSwitcher";
 import Auth from "@/Components/Features/Auth/Auth";
 
 function UserMenu() {
@@ -28,25 +29,7 @@ function UserMenu() {
           loading="lazy"
         />
       </a>
-      <div className={styles.langSwitcherWrapper}>
-        <div className={styles.langSwitcher}>
-          <input
-            id="kz"
-            name="lang"
-            value="kz"
-            type="radio"
-          />
-          <label htmlFor="kz">Қаз</label>
-          <input
-            id="ru"
-            name="lang"
-            value="ru"
-            type="radio"
-            defaultChecked
-          />
-          <label htmlFor="ru">Рус</label>
-        </div>
-      </div>
+      <LangSwitcher />
       <Auth />
     </div>
   )
