@@ -1,6 +1,6 @@
 import cart from '../../../assets/icons/cart.svg'
-import favorite from '../../../assets/icons/favourite.svg'
 import styles from './UserMenu.module.scss'
+import Favorite from "@/Components/Features/Favorite/Favorite";
 import LangSwitcher from "@/Components/Features/LanguageSwitcher/LangSwitcher";
 import Auth from "@/Components/Features/Auth/Auth";
 
@@ -20,15 +20,7 @@ function UserMenu() {
           <div className="p300">2 товара</div>
         </div>
       </a>
-      <a className={styles.cart}>
-        <img
-          src={favorite}
-          alt=""
-          width=""
-          height=""
-          loading="lazy"
-        />
-      </a>
+      <Favorite />
       <LangSwitcher />
       <Auth />
     </div>
