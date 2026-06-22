@@ -8,3 +8,11 @@
   }
 }
 
+.burgerButton {
+  padding: toRem(8);
+  cursor: pointer;
+
+  @include hover {
+    background-color: var(--color-blue-grand);
+  }
+}

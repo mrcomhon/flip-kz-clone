@@ -23,6 +23,7 @@ function Header() {
           <LogoWrapper
             LocationClass="visible-tablet"
             LogoClass="visually-hidden"
+            BurgerClass="visually-hidden"
           />
         </nav>
       </div>
