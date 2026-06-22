@@ -9,7 +9,7 @@ function UserMenu() {
     <div className={styles.userMenu}>
       <Cart />
       <Favorite />
-      <LangSwitcher />
+      <LangSwitcher className="hidden-tablet"/>
       <Auth />
     </div>
   )
