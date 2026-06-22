@@ -16,3 +16,10 @@
     display: none;
   }
 }
+
+.icon {
+  @include tablet {
+    width: toRem(30);
+    height: toRem(30);
+  }
+}

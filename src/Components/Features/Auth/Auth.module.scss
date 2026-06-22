@@ -1,3 +1,15 @@
+.desktopAuth {
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobileAuth {
+  @include tablet-above {
+    display: none;
+  }
+}
+
 .authHover {
   display: flex;
   align-items: center;
@@ -15,4 +27,26 @@
   gap: toRem(4);
   padding: toRem(8);
   cursor: pointer;
+}
+
+.authIcon {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+  padding: toRem(8);
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+
+  @include hover{
+    background-color: var(--color-blue-grand);
+  }
+}
+
+.icon {
+  color: var(--color-white);
+
+  @include tablet {
+    width: toRem(28);
+    height: toRem(28);
+  }
 }

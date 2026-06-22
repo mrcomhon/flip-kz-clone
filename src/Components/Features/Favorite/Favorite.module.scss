@@ -10,3 +10,10 @@
     background-color: var(--color-blue-grand);
   }
 }
+
+.icon {
+  @include tablet {
+    width: toRem(28);
+    height: toRem(28);
+  }
+}
