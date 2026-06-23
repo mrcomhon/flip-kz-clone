@@ -8,21 +8,44 @@
   padding: toRem(12) toRem(6);
   gap: toRem(2);
 
-  @include hover{
-    background-color: var(--color-blue-grand);
+  @include tablet-above {
+    @include hover {
+      background-color: var(--color-blue-grand);
+    }
   }
 
   @include tablet {
-
+    padding: toRem(4) toRem(4);
   }
 }
 
 .city {
   padding-left: toRem(18);
+
+  @include tablet {
+    color: var(--color-black);
+    font-weight: 700;
+    padding-left: 0;
+  }
 }
 
 .gapRow {
   display: flex;
   align-items: center;
   gap: toRem(4);
+
+  @include tablet {
+    padding-left: toRem(12);
+  }
+}
+
+.mobileAddress {
+  text-decoration: none;
+  color: var(--color-blue-grand);
+}
+
+.icon {
+  @include tablet {
+    color: var(--color-yellow-brand);
+  }
 }

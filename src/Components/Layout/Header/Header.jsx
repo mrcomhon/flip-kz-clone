@@ -20,12 +20,12 @@ function Header() {
             <UserMenu />
           </div>
           <SearchBar />
+        </nav>
           <LogoWrapper
             LocationClass="visible-tablet"
             LogoClass="visually-hidden"
             BurgerClass="visually-hidden"
           />
-        </nav>
       </div>
     </header>
   )

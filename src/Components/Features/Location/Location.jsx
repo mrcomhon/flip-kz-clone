@@ -1,20 +1,16 @@
-import location from '../../../assets/icons/location.svg'
-
+import LocationIcon from '../../../assets/icons/location.svg?react'
 import styles from "./Location.module.scss";
 
 function Location({className}) {
   return (
-    <div className={`${styles.location} ${className}`}>
-      <div className={`${styles.city} p300`}>Астана</div>
+    <div className={`${styles.location} ${className} `}>
+      <span className={`${styles.city} p300 hidden-tablet`}>Астана</span>
       <div className={styles.gapRow}>
-        <img
-          src={location}
-          alt=""
-          width=""
-          height=""
-          loading="lazy"
-        />
-        <div className="p500">Уточните адрес</div>
+        <LocationIcon className={`${styles.icon} hidden-tablet`}/>
+        <div className="p500 hidden-tablet">Уточните адрес</div>
+        <LocationIcon className={`${styles.icon} visible-tablet`}/>
+        <span className={`${styles.city} p500 visible-tablet`}>Астана</span>
+        <a href="#" className={`${styles.mobileAddress} visible-tablet p500`}>уточните город и адрес доставки ▾</a>
       </div>
     </div>
   )
