@@ -2,9 +2,14 @@
   display: flex;
   align-items: center;
   gap: toRem(20);
+  padding-top: toRem(4);
 
   @include laptop {
     gap: toRem(8);
+  }
+
+  @include tablet {
+    padding-top: toRem(8);
   }
 }
 

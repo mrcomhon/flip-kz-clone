@@ -1,3 +1,9 @@
 .logo {
+  fill: var(--color-white);
   width: toRem(62);
+  height: toRem(42);
+
+  polygon {
+    fill: #ffbd00;
+  }
 }

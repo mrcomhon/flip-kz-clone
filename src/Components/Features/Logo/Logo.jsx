@@ -1,4 +1,4 @@
-import logo from "../../../assets/icons/logo.svg"
+import LogoIcon from "../../../assets/icons/logo.svg?react"
 import styles from "@/Components/Features/Logo/Logo.module.scss";
 
 function Logo({className}) {
@@ -8,14 +8,7 @@ function Logo({className}) {
       title="Home-page"
       className={className}
     >
-      <img
-        src={logo}
-        alt="FlipClone.kz"
-        width="60px"
-        height=""
-        loading="lazy"
-        className={styles.logo}
-      />
+      <LogoIcon className={styles.logo} />
     </a>
   )
 }
