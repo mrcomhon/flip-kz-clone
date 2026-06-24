@@ -38,3 +38,8 @@
 Логика:
 - Связывать все страницы
 - Память
+
+- Accessibility (то есть tab & screen reader)
+- Тема через переменные ( @media (prefers-color-scheme: dark) {
+                             background-color: #111213;
+                           })

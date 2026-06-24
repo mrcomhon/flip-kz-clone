@@ -6,7 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+body.darken-bg {
+  background: rgba(0, 0, 0, 0.5);
+  transition-duration: var(--transition-duration);
+}
 
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);

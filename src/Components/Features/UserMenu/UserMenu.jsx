@@ -7,10 +7,10 @@ import Auth from "@/Components/Features/Auth/Auth";
 function UserMenu() {
   return (
     <div className={styles.userMenu}>
-      <Cart />
-      <Favorite />
-      <LangSwitcher className="hidden-tablet"/>
       <Auth />
+      <LangSwitcher className="hidden-tablet"/>
+      <Favorite />
+      <Cart />
     </div>
   )
 }

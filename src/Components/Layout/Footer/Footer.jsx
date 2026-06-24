@@ -27,7 +27,7 @@ function Footer() {
                   <li>
                     <a href="telegram">
                       <img
-                        
+
                         src=""
                         alt=""
                         width=""
@@ -69,13 +69,14 @@ function Footer() {
                   <li>
                     <a href="play-market">
                       <img
-                        
+
                         src=""
                         alt=""
                         width=""
                         height=""
                         loading="lazy"
-                      /></a>
+                      />
+                    </a>
                   </li>
                   <li>
                     <a href="app-store">
@@ -94,6 +95,10 @@ function Footer() {
             </li>
           </ul>
           <p>© 2007-2026 ТОО FlipClone.kz</p>
+          <p>Lorem ipsum dolor sit amet, cons
+            ectetur adipisicing elit. Aliquam doloremque dolores enim, exercitationem expedita, fugiat impedit nam
+            nemo nihil nobis, porro possimus ut voluptates? Alias culpa quos sit ullam voluptatibus.
+          </p>
         </nav>
       </footer>
     </>
