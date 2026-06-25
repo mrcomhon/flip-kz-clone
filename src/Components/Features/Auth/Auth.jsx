@@ -1,9 +1,10 @@
 import styles from "@/Components/Features/Auth/Auth.module.scss";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import DesktopAuth
   from "@/Components/Features/Auth/Components/DesktopAuth/DesktopAuth";
 import MobileAuth
   from "@/Components/Features/Auth/Components/MobileAuth/MobileAuth";
+import {useDarkenBackground} from "@/hooks/useDarkenBackground";
 
 function Auth() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,15 +12,7 @@ function Auth() {
   const openMenu = () => setIsModalOpen(true)
   const closeMenu = () => setIsModalOpen(false)
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.classList.add('darken-bg')
-    } else {
-      document.body.classList.remove('darken-bg')
-    }
-
-    return () => document.body.classList.remove('darken-bg');
-  }, [isModalOpen])
+  useDarkenBackground(isModalOpen)
 
   return (
     <div className={styles.authHover}>
