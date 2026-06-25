@@ -1,0 +1,27 @@
+.mobileAuth {
+  @include tablet-above {
+    display: none;
+  }
+}
+
+.authIcon {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+  padding: toRem(8);
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+
+  @include hover{
+    background-color: var(--color-blue-grand);
+  }
+}
+
+.icon {
+  color: var(--color-white);
+
+  @include tablet {
+    width: toRem(28);
+    height: toRem(28);
+  }
+}

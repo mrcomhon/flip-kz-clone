@@ -1,0 +1,57 @@
+.dropdownMenu {
+  position: absolute;
+  border-top: none;
+  width: toRem(220);
+  left: 0;
+  top: 100%;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+}
+
+.dropdownMenu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 10px;
+  z-index: 3;
+  top: -10px;
+  left: 24px;
+
+  background-image: url("../../../assets/png/top_arrow.png");
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+}
+
+.dropdownMenu ul {
+  padding: 0;
+  text-decoration: none;
+}
+
+.dropdownMenu ul li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.dropdownMenu ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: toRem(4);
+  color: var(--color-blue-grand);
+  font-size: toRem(18);
+  padding: toRem(10);
+  text-decoration: none;
+
+  @include hover {
+    background: var(--color-yellow-brand);
+    color: var(--color-black);
+    text-decoration: none;
+  }
+}
