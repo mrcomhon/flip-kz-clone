@@ -10,12 +10,12 @@ function DesktopAuth({onOpen, onClose, isModalOpen}) {
       onMouseEnter={onOpen}
       onMouseLeave={onClose}
     >
-      <a
+      <button
         className={styles.auth}
       >
         <div className="p500">Войти</div>
         <div className="p300">Мой раздел</div>
-      </a>
+      </button>
       {isModalOpen && (<AuthDropdown />)}
     </div>
   )
