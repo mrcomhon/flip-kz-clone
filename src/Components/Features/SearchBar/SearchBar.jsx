@@ -1,4 +1,4 @@
-import search from '../../../assets/icons/search.svg'
+import SearchIcon from '../../../assets/icons/search.svg?react'
 import styles from './SearchBar.module.scss'
 
 function SearchBar() {
@@ -21,13 +21,7 @@ function SearchBar() {
           title="Поиск"
           type="submit"
         >
-          <img
-            src={search}
-            alt="search"
-            width=""
-            height=""
-            loading="lazy"
-          />
+          <SearchIcon />
         </button>
       </form>
     </div>
