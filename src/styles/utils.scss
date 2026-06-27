@@ -17,6 +17,17 @@ body.darken-bg {
   padding-inline: var(--container-padding-x);
 }
 
+.reset-button {
+  background: none;      /* Removes the default gray background */
+  border: none;          /* Removes the default border */
+  padding: 0;            /* Removes native inner spacing */
+  margin: 0;             /* Removes native outer spacing */
+  font: inherit;         /* Uses the font of the parent element */
+  color: inherit;        /* Uses the text color of the parent element */
+  text-align: inherit;   /* Uses the text alignment of the parent element */
+  appearance: none;      /* Removes platform-specific native styling */
+}
+
 .visually-hidden {
   @include visually-hidden;
 }

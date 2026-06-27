@@ -11,7 +11,7 @@ function DesktopAuth({onOpen, onClose, isModalOpen}) {
       onMouseLeave={onClose}
     >
       <button
-        className={styles.auth}
+        className={`${styles.auth} reset-button`}
       >
         <div className="p500">Войти</div>
         <div className="p300">Мой раздел</div>
