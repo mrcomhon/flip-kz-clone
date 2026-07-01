@@ -1,0 +1,7 @@
+.closeButton {
+  color: var(--color-black);
+  width: toRem(50);
+  height: toRem(50);
+
+  @include flex-center;
+}
