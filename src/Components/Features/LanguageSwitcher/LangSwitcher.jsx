@@ -18,7 +18,6 @@ function LangSwitcher({className}) {
           name="lang"
           value="ru"
           type="radio"
-          defaultChecked
         />
         <label htmlFor="ru">Рус</label>
       </div>
