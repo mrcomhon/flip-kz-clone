@@ -18,14 +18,21 @@ body.darken-bg {
 }
 
 .reset-button {
-  background: none;      /* Removes the default gray background */
-  border: none;          /* Removes the default border */
-  padding: 0;            /* Removes native inner spacing */
-  margin: 0;             /* Removes native outer spacing */
-  font: inherit;         /* Uses the font of the parent element */
-  color: inherit;        /* Uses the text color of the parent element */
-  text-align: inherit;   /* Uses the text alignment of the parent element */
-  appearance: none;      /* Removes platform-specific native styling */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.hide-tab {
+  visibility: hidden;
 }
 
 .visually-hidden {
