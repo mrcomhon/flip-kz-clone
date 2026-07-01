@@ -1,9 +1,10 @@
 import styles from "@/Components/Features/LanguageSwitcher/LangSwitcher.module.scss";
+import clsx from "clsx";
 
 
 function LangSwitcher({className}) {
   return (
-    <div className={`${styles.langSwitcherWrapper} ${className}`}>
+    <div className={clsx(styles.langSwitcherWrapper, className)}>
       <div className={styles.langSwitcher}>
         <input
           id="kz"

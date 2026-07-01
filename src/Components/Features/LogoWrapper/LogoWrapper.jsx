@@ -7,7 +7,10 @@ import Burger from "@/assets/icons/burger.svg?react"
 function LogoWrapper({LogoClass, LocationClass, BurgerClass}) {
   return (
     <div className={styles.logoWrapper}>
-      <span className={`${styles.burgerButton} visible-tablet ${BurgerClass}`}>
+      <span
+        className={clsx(styles.burgerButton, 'visible-tablet', BurgerClass, 'reset-button')}
+        onClick={activeButton}
+      >
         <Burger />
       </span>
       <Logo className={LogoClass}/>

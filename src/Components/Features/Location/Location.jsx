@@ -1,9 +1,10 @@
 import LocationIcon from '../../../assets/icons/location.svg?react'
 import styles from "./Location.module.scss";
+import clsx from "clsx";
 
 function Location({className}) {
   return (
-    <div className={`${styles.location} ${className} `}>
+    <div className={clsx(styles.location , className, 'reset-button' )}>
       <span className={`${styles.city} p300 hidden-tablet`}>Астана</span>
       <div className={styles.gapRow}>
         <LocationIcon className={`${styles.icon} hidden-tablet`}/>
