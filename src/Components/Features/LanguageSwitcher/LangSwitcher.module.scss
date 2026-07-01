@@ -5,11 +5,16 @@
 
 .langSwitcher {
   display: flex;
-  background: rgba(255, 255, 255, .1);
+  background-color: var(--color-blue-light);
+  color: var(--color-light);
   padding: toRem(4);
   gap: toRem(4);
   align-items: center;
   border-radius: toRem(80);
+
+  @include tablet-above {
+  background-color: rgba(255, 255, 255, .1);
+  }
 
   input {
     display: none;

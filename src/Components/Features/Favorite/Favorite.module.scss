@@ -12,6 +12,8 @@
 }
 
 .icon {
+  color: var(--color-light);
+
   @include tablet {
     width: toRem(28);
     height: toRem(28);
