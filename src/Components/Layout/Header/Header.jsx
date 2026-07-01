@@ -8,7 +8,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
         <nav className={`${styles.navigation} container`}>
-          <LogoWrapper LocationClass="hidden-tablet" />
+          <LogoWrapper />
           <SearchBar />
           <UserMenu />
         </nav>
@@ -16,15 +16,15 @@ function Header() {
       <div className={styles.mobileHeader}>
         <nav className={`${styles.mobileNavigation} container`}>
           <div className={styles.headerTop}>
-            <LogoWrapper LocationClass="visually-hidden" />
+            <LogoWrapper LocationClass="hide-tab" />
             <UserMenu />
           </div>
           <SearchBar />
         </nav>
           <LogoWrapper
             LocationClass="visible-tablet"
-            LogoClass="visually-hidden"
-            BurgerClass="visually-hidden"
+            LogoClass="hide-tab visually-hidden"
+            BurgerClass="hide-tab visually-hidden"
           />
       </div>
     </header>
