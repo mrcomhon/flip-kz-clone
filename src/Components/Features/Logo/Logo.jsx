@@ -4,7 +4,7 @@ import styles from "@/Components/Features/Logo/Logo.module.scss";
 function Logo({className}) {
   return (
     <a
-      href="/public"
+      href="/logo"
       title="Home-page"
       className={className}
     >

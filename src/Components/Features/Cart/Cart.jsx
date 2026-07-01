@@ -4,7 +4,7 @@ import CartIcon from "@/assets/icons/cart.svg?react";
 
 function Cart() {
   return (
-    <a className={styles.cart}>
+    <a className={styles.cart} href="#">
       <CartIcon className={styles.icon} />
       <div className={styles.cartExtra}>
         <div className="p500">Корзина</div>
