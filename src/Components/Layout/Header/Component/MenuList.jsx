@@ -1,5 +1,5 @@
 import styles
-  from "@/Components/Layout/Header/Component/MenuList.module.scss";
+  from "@/components/Layout/Header/Component/MenuList.module.scss";
 import {MdWindow} from "react-icons/md";
 import {BsCurrencyDollar, BsFire} from "react-icons/bs";
 import {BsFillCreditCardFill} from "react-icons/bs";

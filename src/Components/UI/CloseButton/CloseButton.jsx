@@ -1,4 +1,4 @@
-import styles from '@/Components/UI/CloseButton/CloseButton.module.scss'
+import styles from '@/components/UI/CloseButton/CloseButton.module.scss'
 import { IoMdClose } from "react-icons/io";
 import clsx from "clsx";
 

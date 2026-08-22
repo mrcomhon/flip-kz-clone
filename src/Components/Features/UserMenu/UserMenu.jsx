@@ -1,8 +1,8 @@
 import styles from './UserMenu.module.scss'
-import Cart from "@/Components/Features/Cart/Cart";
-import Favorite from "@/Components/Features/Favorite/Favorite";
-import LangSwitcher from "@/Components/Features/LanguageSwitcher/LangSwitcher";
-import Auth from "@/Components/Features/Auth/Auth";
+import Cart from "@/components/Features/Cart/Cart";
+import Favorite from "@/components/Features/Favorite/Favorite";
+import LangSwitcher from "@/components/Features/LanguageSwitcher/LangSwitcher";
+import Auth from "@/components/Features/Auth/Auth";
 
 function UserMenu() {
   return (

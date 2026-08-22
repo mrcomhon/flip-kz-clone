@@ -1,4 +1,4 @@
-import styles from "@/Components/Features/Auth/Components/AuthDropdown/AuthDropdown.module.scss";
+import styles from "@/components/Features/Auth/Components/AuthDropdown/AuthDropdown.module.scss";
 
 
 function AuthDropdown() {

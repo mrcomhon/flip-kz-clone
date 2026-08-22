@@ -1,4 +1,4 @@
-import styles from '@/Components/Features/Auth/Components/MobileAuth/MobileAuth.module.scss'
+import styles from '@/components/Features/Auth/Components/MobileAuth/MobileAuth.module.scss'
 import AuthIcon from "@/assets/icons/account.svg?react";
 
 function MobileAuth() {

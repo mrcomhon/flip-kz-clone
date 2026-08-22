@@ -1,11 +1,11 @@
 import styles from "./LogoWrapper.module.scss";
-import Location from "@/Components/Features/Location/Location";
-import Logo from "@/Components/Features/Logo/Logo";
+import Location from "@/components/Features/Location/Location";
+import Logo from "@/components/Features/Logo/Logo";
 import Burger from "@/assets/icons/burger.svg?react"
 import clsx from 'clsx'
 import {useState} from "react";
 import {useDarkenBackground} from "@/hooks/useDarkenBackground";
-import BurgerMenu from "@/Components/Layout/Header/Component/BurgerMenu";
+import BurgerMenu from "@/components/Layout/Header/Component/BurgerMenu";
 
 
 function LogoWrapper({LogoClass, LocationClass, BurgerClass}) {

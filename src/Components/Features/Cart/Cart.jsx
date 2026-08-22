@@ -1,4 +1,4 @@
-import styles from "@/Components/Features/Cart/Cart.module.scss";
+import styles from "@/components/Features/Cart/Cart.module.scss";
 import CartIcon from "@/assets/icons/cart.svg?react";
 
 

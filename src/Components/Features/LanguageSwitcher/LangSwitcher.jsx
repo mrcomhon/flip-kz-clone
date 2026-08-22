@@ -1,4 +1,4 @@
-import styles from "@/Components/Features/LanguageSwitcher/LangSwitcher.module.scss";
+import styles from "@/components/Features/LanguageSwitcher/LangSwitcher.module.scss";
 import clsx from "clsx";
 
 

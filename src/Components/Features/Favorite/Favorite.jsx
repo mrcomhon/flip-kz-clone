@@ -1,4 +1,4 @@
-import styles from "@/Components/Features/Favorite/Favorite.module.scss";
+import styles from "@/components/Features/Favorite/Favorite.module.scss";
 import FavoriteIcon from "@/assets/icons/favourite.svg?react";
 
 
