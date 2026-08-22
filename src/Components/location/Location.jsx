@@ -1,4 +1,4 @@
-import LocationIcon from '../../../assets/icons/location.svg?react'
+import LocationIcon from '@/assets/icons/location.svg?react'
 import styles from "./Location.module.scss";
 import clsx from "clsx";
 

@@ -1,4 +1,4 @@
-import LogoIcon from "../../../assets/icons/logo.svg?react"
+import LogoIcon from "@/assets/icons/logo.svg?react"
 import styles from "@/components/Features/Logo/Logo.module.scss";
 
 function Logo({className}) {
