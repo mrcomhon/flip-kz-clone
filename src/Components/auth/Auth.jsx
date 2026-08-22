@@ -1,9 +1,9 @@
 import styles from "@/components/Features/Auth/Auth.module.scss";
 import {useState} from "react";
 import DesktopAuth
-  from "@/components/Features/Auth/Components/DesktopAuth/DesktopAuth";
+  from "@/components/auth/DesktopAuth/DesktopAuth";
 import MobileAuth
-  from "@/components/Features/Auth/Components/MobileAuth/MobileAuth";
+  from "@/components/auth/MobileAuth/MobileAuth";
 import {useDarkenBackground} from "@/hooks/useDarkenBackground";
 
 function Auth() {

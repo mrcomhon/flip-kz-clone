@@ -1,7 +1,7 @@
 import styles
   from "@/components/Features/Auth/Components/DesktopAuth/DesktopAuth.module.scss";
 import AuthDropdown
-  from "@/components/Features/Auth/Components/AuthDropdown/AuthDropdown";
+  from "@/components/auth/AuthDropdown/AuthDropdown";
 
 
 function DesktopAuth({onOpen, onClose, isModalOpen}) {
