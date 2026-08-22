@@ -1,6 +1,6 @@
 import styles from './Footer.module.scss'
 
-function Footer() {
+export function Footer() {
   return (
     <>
       <footer>
@@ -21,7 +21,7 @@ function Footer() {
                 </ul>
               </div>
             </li>
-            <li className="SecondColumn">
+            <li className={styles.SecondColumn}>
               <div>
                 <ul>
                   <li>
@@ -63,7 +63,7 @@ function Footer() {
                 </ul>
               </div>
             </li>
-            <li className="ThirdColumn">
+            <li className={styles.ThirdColumn}>
               <div>
                 <ul>
                   <li>
@@ -104,5 +104,3 @@ function Footer() {
     </>
   )
 }
-
-export default Footer

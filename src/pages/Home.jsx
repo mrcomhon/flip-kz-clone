@@ -1,5 +1,5 @@
 import Header from "../Components/Layout/Header/Header";
-import Footer from "../Components/Layout/Footer/Footer";
+import { Footer } from "../Components/Layout/Footer";
 
 function HomePage() {
   return (
