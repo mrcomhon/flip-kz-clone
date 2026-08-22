@@ -1,6 +1,6 @@
 import styles from "./LogoWrapper.module.scss";
 import Location from "@/components/Features/Location/Location";
-import Logo from "@/components/Features/Logo/Logo";
+import Logo from "@/components/UI/Logo/Logo";
 import Burger from "@/assets/icons/burger.svg?react"
 import clsx from 'clsx'
 import {useState} from "react";
