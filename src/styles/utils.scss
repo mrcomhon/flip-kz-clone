@@ -12,7 +12,7 @@ body.darken-bg {
 }
 
 .container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  max-width: calc(var(--container) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }

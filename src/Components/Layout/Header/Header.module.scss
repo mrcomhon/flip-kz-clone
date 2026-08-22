@@ -4,6 +4,8 @@
 }
 
 .desktopHeader {
+  background-color: var(--color-blue-light);
+
   @include tablet {
     display: none;
   }
@@ -22,7 +24,6 @@
 
 .navigation {
   display: flex;
-  background-color: var(--color-blue-light);
   align-items: center;
   gap: toRem(16);
 

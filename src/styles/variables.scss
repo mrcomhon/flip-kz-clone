@@ -28,8 +28,4 @@
 
   --container: #{toRem(1640)};
   --container-padding-x: #{toRem(32)};
-
-  @include laptop {
-    --container-width: #{toRem(1280)};
-  }
 }
