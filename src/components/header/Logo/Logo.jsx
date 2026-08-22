@@ -1,7 +1,7 @@
-import LogoIcon from "@/assets/icons/logo.svg?react"
-import styles from "@/components/Features/Logo/Logo.module.scss";
+import LogoIcon from "@/assets/icons/logo.svg?react";
+import styles from "./Logo.module.scss";
 
-function Logo({className}) {
+export function Logo({className}) {
   return (
     <a
       href="/logo"
@@ -12,5 +12,3 @@ function Logo({className}) {
     </a>
   )
 }
-
-export default Logo

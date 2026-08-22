@@ -1,12 +1,10 @@
-import styles from "@/components/Features/Auth/Auth.module.scss";
-import {useState} from "react";
-import DesktopAuth
-  from "@/components/auth/DesktopAuth/DesktopAuth";
-import MobileAuth
-  from "@/components/auth/MobileAuth/MobileAuth";
-import {useDarkenBackground} from "@/hooks/useDarkenBackground";
+import { useState } from "react";
+import { DesktopAuth } from "@/components/auth/DesktopAuth";
+import { MobileAuth } from "@/components/auth/MobileAuth";
+import { useDarkenBackground } from "@/hooks/useDarkenBackground";
+import styles from "./Auth.module.scss";
 
-function Auth() {
+export function Auth() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openMenu = () => setIsModalOpen(true)
@@ -25,5 +23,3 @@ function Auth() {
       <MobileAuth />
     </div>)
 }
-
-export default Auth

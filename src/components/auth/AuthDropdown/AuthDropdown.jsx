@@ -1,7 +1,6 @@
-import styles from "@/components/Features/Auth/Components/AuthDropdown/AuthDropdown.module.scss";
+import styles from "./AuthDropdown.module.scss";
 
-
-function AuthDropdown() {
+export function AuthDropdown() {
   return (
     <div className={styles.dropdownMenu}>
       <ul>
@@ -24,5 +23,3 @@ function AuthDropdown() {
     </div>
   )
 }
-
-export default AuthDropdown

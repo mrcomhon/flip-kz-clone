@@ -1,10 +1,10 @@
-import styles from './UserMenu.module.scss'
-import Cart from "@/components/cart/Cart";
-import Favorite from "@/components/favorite/Favorite";
-import LangSwitcher from "@/components/LangSwitcher/LangSwitcher";
-import Auth from "@/components/auth/Auth";
+import { Auth } from "@/components/auth/Auth";
+import { Cart } from "@/components/header/Cart";
+import { Favorite } from "@/components/header/Favorite";
+import { LangSwitcher } from "@/components/header/LangSwitcher";
+import styles from "./UserMenu.module.scss";
 
-function UserMenu() {
+export function UserMenu() {
   return (
     <div className={styles.userMenu}>
       <Auth />
@@ -14,5 +14,3 @@ function UserMenu() {
     </div>
   )
 }
-
-export default UserMenu

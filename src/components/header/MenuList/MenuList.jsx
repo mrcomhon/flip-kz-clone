@@ -1,5 +1,4 @@
-import styles
-  from "@/components/Layout/Header/Component/MenuList.module.scss";
+import styles from "./MenuList.module.scss";
 import {MdWindow} from "react-icons/md";
 import {BsCurrencyDollar, BsFire} from "react-icons/bs";
 import {BsFillCreditCardFill} from "react-icons/bs";
@@ -9,7 +8,7 @@ import {IoMdHeart} from "react-icons/io";
 import {MdHelp} from "react-icons/md";
 import {BiLogoTelegram} from "react-icons/bi";
 
-function MenuList() {
+export function MenuList() {
   return (
     <ul className={styles.list}>
       <li>
@@ -96,5 +95,3 @@ function MenuList() {
     </ul>
   )
 }
-
-export default MenuList

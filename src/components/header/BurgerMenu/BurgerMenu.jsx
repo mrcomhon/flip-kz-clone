@@ -1,12 +1,12 @@
-import styles from '@/components/Layout/Header/Component/BurgerMenu.module.scss'
-import CloseButton from "@/components/UI/CloseButton/CloseButton";
-import LangSwitcher from "@/components/LangSwitcher/LangSwitcher";
-import profileImg from "@/assets/png/profile.jpg"
 import clsx from "clsx";
-import MenuList from "@/components/Layout1/Header/Component/MenuList";
-import FocusLock from 'react-focus-lock'
+import FocusLock from "react-focus-lock";
+import profileImg from "@/assets/png/profile.jpg";
+import { LangSwitcher } from "@/components/header/LangSwitcher";
+import { MenuList } from "@/components/header/MenuList";
+import { CloseButton } from "@/components/ui/CloseButton";
+import styles from "./BurgerMenu.module.scss";
 
-function BurgerMenu({onClose}) {
+export function BurgerMenu({onClose}) {
   const onEscape = (e) => {
     if (e.key === 'Escape') {
       onClose()
@@ -48,5 +48,3 @@ function BurgerMenu({onClose}) {
     </div>
   )
 }
-
-export default BurgerMenu

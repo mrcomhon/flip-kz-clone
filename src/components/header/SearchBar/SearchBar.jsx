@@ -1,7 +1,7 @@
-import SearchIcon from '@/assets/icons/search.svg?react'
-import styles from './SearchBar.module.scss'
+import SearchIcon from "@/assets/icons/search.svg?react";
+import styles from "./SearchBar.module.scss";
 
-function SearchBar() {
+export function SearchBar() {
   return (
     <div className={styles.searchBar}>
       <form
@@ -27,5 +27,3 @@ function SearchBar() {
     </div>
   )
 }
-
-export default SearchBar

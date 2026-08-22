@@ -1,14 +1,13 @@
+import { useState } from "react";
+import clsx from "clsx";
+import Burger from "@/assets/icons/burger.svg?react";
+import { BurgerMenu } from "@/components/header/BurgerMenu";
+import { Location } from "@/components/header/Location";
+import { Logo } from "@/components/header/Logo";
+import { useDarkenBackground } from "@/hooks/useDarkenBackground";
 import styles from "./LogoWrapper.module.scss";
-import Location from "@/components/location/Location";
-import Logo from "@/components/UI/Logo/Logo";
-import Burger from "@/assets/icons/burger.svg?react"
-import clsx from 'clsx'
-import {useState} from "react";
-import {useDarkenBackground} from "@/hooks/useDarkenBackground";
-import BurgerMenu from "@/components/Layout1/Header/Component/BurgerMenu";
 
-
-function LogoWrapper({LogoClass, LocationClass, BurgerClass}) {
+export function LogoWrapper({LogoClass, LocationClass, BurgerClass}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const activeButton = () => setIsMenuOpen(true)
   const closeButton = () => setIsMenuOpen(false)
@@ -30,5 +29,3 @@ function LogoWrapper({LogoClass, LocationClass, BurgerClass}) {
     </div>
   )
 }
-
-export default LogoWrapper

@@ -1,8 +1,7 @@
-import styles from "@/components/Features/LanguageSwitcher/LangSwitcher.module.scss";
 import clsx from "clsx";
+import styles from "./LangSwitcher.module.scss";
 
-
-function LangSwitcher({className}) {
+export function LangSwitcher({className}) {
   return (
     <div className={clsx(styles.langSwitcherWrapper, className)}>
       <div className={styles.langSwitcher}>
@@ -24,5 +23,3 @@ function LangSwitcher({className}) {
     </div>
   )
 }
-
-export default LangSwitcher

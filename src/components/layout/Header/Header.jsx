@@ -1,7 +1,7 @@
-import styles from './Header.module.scss'
-import SearchBar from "@/components/SearchBar/SearchBar";
-import LogoWrapper from "@/components/LogoWrapper/LogoWrapper";
-import UserMenu from "@/components/UserMenu/UserMenu";
+import { LogoWrapper } from "@/components/header/LogoWrapper";
+import { SearchBar } from "@/components/header/SearchBar";
+import { UserMenu } from "@/components/header/UserMenu";
+import styles from "./Header.module.scss";
 
 export function Header() {
   return (

@@ -1,7 +1,7 @@
-import styles from '@/components/Features/Auth/Components/MobileAuth/MobileAuth.module.scss'
 import AuthIcon from "@/assets/icons/account.svg?react";
+import styles from "./MobileAuth.module.scss";
 
-function MobileAuth() {
+export function MobileAuth() {
   return (
     <div className={styles.mobileAuth}>
       <a
@@ -13,5 +13,3 @@ function MobileAuth() {
     </div>
   )
 }
-
-export default MobileAuth

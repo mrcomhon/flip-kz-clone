@@ -1,8 +1,7 @@
-import styles from "@/components/Features/Cart/Cart.module.scss";
 import CartIcon from "@/assets/icons/cart.svg?react";
+import styles from "./Cart.module.scss";
 
-
-function Cart() {
+export function Cart() {
   return (
     <a className={styles.cart} href="#">
       <CartIcon className={styles.icon} />
@@ -13,5 +12,3 @@ function Cart() {
     </a>
   )
 }
-
-export default Cart

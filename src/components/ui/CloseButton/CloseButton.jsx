@@ -1,8 +1,8 @@
-import styles from '@/components/UI/CloseButton/CloseButton.module.scss'
 import { IoMdClose } from "react-icons/io";
 import clsx from "clsx";
+import styles from "./CloseButton.module.scss";
 
-function CloseButton({onClose}) {
+export function CloseButton({onClose}) {
   return (
     <button
       type="button"
@@ -13,5 +13,3 @@ function CloseButton({onClose}) {
     </button>
   )
 }
-
-export default CloseButton

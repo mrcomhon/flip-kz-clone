@@ -1,8 +1,8 @@
-import LocationIcon from '@/assets/icons/location.svg?react'
-import styles from "./Location.module.scss";
+import LocationIcon from "@/assets/icons/location.svg?react";
 import clsx from "clsx";
+import styles from "./Location.module.scss";
 
-function Location({className}) {
+export function Location({className}) {
   return (
     <button className={clsx(styles.location , className, 'reset-button' )}>
       <span className={`${styles.city} p300 hidden-tablet`}>Астана</span>
@@ -17,5 +17,3 @@ function Location({className}) {
     </button>
   )
 }
-
-export default Location

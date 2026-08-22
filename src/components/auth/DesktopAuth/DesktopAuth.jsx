@@ -1,10 +1,7 @@
-import styles
-  from "@/components/Features/Auth/Components/DesktopAuth/DesktopAuth.module.scss";
-import AuthDropdown
-  from "@/components/auth/AuthDropdown/AuthDropdown";
+import { AuthDropdown } from "@/components/auth/AuthDropdown";
+import styles from "./DesktopAuth.module.scss";
 
-
-function DesktopAuth({onOpen, onClose, isModalOpen}) {
+export function DesktopAuth({onOpen, onClose, isModalOpen}) {
   const handleBlur = (event) => {
     if (event.relatedTarget && event.currentTarget.contains(event.relatedTarget)) {
       return;
@@ -35,5 +32,3 @@ function DesktopAuth({onOpen, onClose, isModalOpen}) {
     </div>
   )
 }
-
-export default DesktopAuth
