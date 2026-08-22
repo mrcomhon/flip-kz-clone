@@ -5,7 +5,7 @@ import Burger from "@/assets/icons/burger.svg?react"
 import clsx from 'clsx'
 import {useState} from "react";
 import {useDarkenBackground} from "@/hooks/useDarkenBackground";
-import BurgerMenu from "@/components/Layout/Header/Component/BurgerMenu";
+import BurgerMenu from "@/components/Layout1/Header/Component/BurgerMenu";
 
 
 function LogoWrapper({LogoClass, LocationClass, BurgerClass}) {

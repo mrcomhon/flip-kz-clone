@@ -3,7 +3,7 @@ import CloseButton from "@/components/UI/CloseButton/CloseButton";
 import LangSwitcher from "@/components/LangSwitcher/LangSwitcher";
 import profileImg from "@/assets/png/profile.jpg"
 import clsx from "clsx";
-import MenuList from "@/components/Layout/Header/Component/MenuList";
+import MenuList from "@/components/Layout1/Header/Component/MenuList";
 import FocusLock from 'react-focus-lock'
 
 function BurgerMenu({onClose}) {
