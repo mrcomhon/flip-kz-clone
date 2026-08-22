@@ -1,6 +1,6 @@
 import styles from '@/components/Layout/Header/Component/BurgerMenu.module.scss'
 import CloseButton from "@/components/UI/CloseButton/CloseButton";
-import LangSwitcher from "@/components/Features/LanguageSwitcher/LangSwitcher";
+import LangSwitcher from "@/components/LangSwitcher/LangSwitcher";
 import profileImg from "@/assets/png/profile.jpg"
 import clsx from "clsx";
 import MenuList from "@/components/Layout/Header/Component/MenuList";
