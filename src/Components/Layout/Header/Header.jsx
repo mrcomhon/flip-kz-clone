@@ -3,7 +3,7 @@ import SearchBar from "@/Components/Features/SearchBar/SearchBar";
 import LogoWrapper from "@/Components/Features/LogoWrapper/LogoWrapper";
 import UserMenu from "@/Components/Features/UserMenu/UserMenu";
 
-function Header() {
+export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
@@ -30,5 +30,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header
