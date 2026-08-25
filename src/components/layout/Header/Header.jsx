@@ -9,29 +9,29 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
         <Container>
-        <nav className={styles.navigation}>
-          <LogoWrapper />
-          <SearchBar />
-          <UserMenu />
-        </nav>
+          <nav className={styles.navigation}>
+            <LogoWrapper />
+            <SearchBar />
+            <UserMenu />
+          </nav>
         </Container>
       </div>
       <div className={styles.mobileHeader}>
-        <Container>
-        <nav className={styles.mobileNavigation}>
-          <div className={styles.headerTop}>
-            <LogoWrapper LocationClass="hide-tab" />
-            <UserMenu />
-          </div>
-          <SearchBar />
-        </nav>
+        <Container className={styles.mobileContainer}>
+          <nav className={styles.mobileNavigation}>
+            <div className={styles.headerTop}>
+              <LogoWrapper LocationClass="hide-tab" />
+              <UserMenu />
+            </div>
+            <SearchBar />
+          </nav>
         </Container>
-          <LogoWrapper
-            LocationClass="visible-tablet"
-            LogoClass="hide-tab visually-hidden"
-            BurgerClass="hide-tab visually-hidden"
-            />
+        <LogoWrapper
+          LocationClass="visible-tablet"
+          LogoClass="hide-tab visually-hidden"
+          BurgerClass="hide-tab visually-hidden"
+        />
       </div>
     </header>
-  )
+  );
 }

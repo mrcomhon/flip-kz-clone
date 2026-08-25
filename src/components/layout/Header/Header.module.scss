@@ -17,6 +17,12 @@
   }
 }
 
+.mobileContainer {
+  @include tablet {
+    padding-inline: 0;
+  }
+}
+
 .headerTop {
   display: flex;
   justify-content: space-between;
