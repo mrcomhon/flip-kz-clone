@@ -1,19 +1,114 @@
-.qr {
-  width: toRem(96);
-  height: toRem(96);
-}
+.footer {
+  background-color: var(--color-gray-3);
+  padding: toRem(32) 0 toRem(16) 0;
 
-.googlePlay {
-  width: toRem(44);
-  height: toRem(44);
-}
+  .footerFlex {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.appStore {
-  width: toRem(44);
-  height: toRem(44);
-}
+  .limit {
+    max-width: toRem(984);
+    margin: 0 auto;
+  }
 
-.soc1al {
-  width: toRem(44);
-  height: toRem(44);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-blue-light);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .anchorList {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(4);
+  }
+
+  .soc1als ul {
+    display: grid;
+    grid-template-columns: repeat(2, toRem(52));
+    gap: toRem(16);
+  }
+
+  .soc1al {
+    display: flex;
+    background-color: var(--color-light);
+    width: toRem(52);
+    height: toRem(52);
+    border-radius: toRem(4);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .soc1alIcon {
+    width: toRem(28);
+    height: toRem(28);
+  }
+
+  .download {
+    width: toRem(300);
+    padding: toRem(12);
+    border-radius: toRem(4);
+    gap: toRem(14);
+    background-color: var(--color-light);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contentBlock {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+  }
+
+  .contentBlock p {
+    font-size: toRem(14);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .app {
+    display: flex;
+    gap: toRem(8);
+  }
+
+  .app a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-3);
+    width: toRem(44);
+    height: toRem(44);
+    border-radius: toRem(4);
+  }
+
+  .qr {
+    width: toRem(96);
+    height: toRem(96);
+  }
+
+  .googlePlay {
+    width: toRem(22);
+    height: toRem(22);
+  }
+
+  .appStore {
+    width: toRem(22);
+    height: toRem(22);
+  }
+
+  .copyright {
+    padding-top: toRem(16);
+  }
 }
