@@ -112,61 +112,74 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        <nav className={styles.columns} aria-label="Ссылки в подвале">
-          {columns.map((column) => (
-            <ul key={column.key} className={styles.list} role="list">
-              {column.links.map((link) => {
-                return (
-                  <li key={link.key}>
-                    <a href={link.href}>{link.label}</a>
-                  </li>
-                );
-              })}
-            </ul>
-          ))}
-        </nav>
+        <div className={styles.limit}>
+          <div className={styles.footerFlex}>
+            {columns.map((column) => (
+              <ul
+                key={column.key}
+                className={styles.anchorList}
+                role="list"
+              >
+                {column.links.map((link) => {
+                  return (
+                    <li key={link.key}>
+                      <a href={link.href}>{link.label}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            ))}
 
-        <nav className={styles.soc1als} aria-label="Социальные сети">
-          <ul role="list">
-            {socials.map((social) => {
-              const Icon = social.src;
+            <nav className={styles.soc1als} aria-label="Социальные сети">
+              <ul className={styles.soc1alList} role="list">
+                {socials.map((social) => {
+                  const Icon = social.src;
 
-              return (
-                <li key={social.key}>
-                  <a href={social.href} aria-label={social.label}>
-                    <Icon
-                      className={styles.soc1al}
+                  return (
+                    <li key={social.key}>
+                      <a
+                        className={styles.soc1al}
+                        href={social.href}
+                        aria-label={social.label}
+                      >
+                        <Icon
+                          className={styles.soc1alIcon}
+                          aria-hidden="true"
+                          focusable="false"
+                        />
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+
+            <div className={styles.download}>
+              <QR className={styles.qr} aria-hidden="true" focusable="false" />
+
+              <div className={styles.contentBlock}>
+                <p>Наведите камеру — скачайте приложение</p>
+                <div className={styles.app}>
+                  <a href="#" aria-label="Скачать в Google Play">
+                    <GooglePlay
+                      className={styles.googlePlay}
                       aria-hidden="true"
                       focusable="false"
                     />
                   </a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-
-        <div className={styles.download}>
-          <QR className={styles.qr} aria-hidden="true" focusable="false" />
-          <p>Наведите камеру — скачайте приложение</p>
-          <div className={styles.app}>
-            <a href="#" aria-label="Скачать в Google Play">
-              <GooglePlay
-                className={styles.googlePlay}
-                aria-hidden="true"
-                focusable="false"
-              />
-            </a>
-            <a href="#" aria-label="Скачать в App Store">
-              <AppStore
-                className={styles.appStore}
-                aria-hidden="true"
-                focusable="false"
-              />
-            </a>
+                  <a href="#" aria-label="Скачать в App Store">
+                    <AppStore
+                      className={styles.appStore}
+                      aria-hidden="true"
+                      focusable="false"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
+          <p className={styles.copyright}>© 2007–2026 ТОО FlipClone.kz</p>
         </div>
-        <p>© 2007–2026 ТОО FlipClone.kz</p>
       </Container>
     </footer>
   );
