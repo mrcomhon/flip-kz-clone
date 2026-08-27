@@ -1,16 +1,84 @@
-# React + Vite
+# FlipClone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Учебный frontend-клон части интерфейса [Flip.kz](https://www.flip.kz/). Проект создан для практики React, TypeScript, адаптивной вёрстки и компонентной архитектуры.
 
-Currently, two official plugins are available:
+> [!IMPORTANT]
+> Проект находится в разработке. Сейчас это frontend-интерфейс без backend, API и полноценной логики интернет-магазина.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Что реализовано
 
-## React Compiler
+- header для desktop, tablet и mobile;
+- burger menu с закрытием по `Escape` и блокировкой фокуса;
+- dropdown авторизации;
+- затемнение фона при открытом меню;
+- интерфейс поиска без поисковой логики;
+- desktop-версия footer;
+- переиспользуемые UI- и layout-компоненты;
+- строгая типизация TypeScript для исходного кода.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Технологии
 
-## Expanding the ESLint configuration
+- React 19;
+- TypeScript;
+- Vite;
+- SCSS Modules;
+- ESLint;
+- SVGR;
+- React Icons;
+- React Focus Lock.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Требования
+
+- Node.js `^20.19.0` или `>=22.12.0`;
+- npm.
+
+## Запуск
+
+```bash
+git clone https://github.com/mrcomhon/flip-kz-clone.git
+cd flip-kz-clone
+npm install
+npm run dev
+```
+
+После запуска Vite выведет локальный URL в терминале.
+
+## Проверки
+
+```bash
+npm run typecheck
+npm run lint
+npm run build
+```
+
+| Команда             | Назначение                |
+| ------------------- | ------------------------- |
+| `npm run dev`       | запуск dev-сервера Vite     |
+| `npm run typecheck` | проверка типов TypeScript   |
+| `npm run lint`      | проверка кода ESLint       |
+| `npm run build`     | production-сборка        |
+| `npm run preview`   | локальный просмотр сборки |
+
+## Структура
+
+```text
+src/
+├── assets/       # иконки, шрифты и изображения
+├── components/   # React-компоненты
+├── hooks/        # пользовательские React-хуки
+├── pages/        # страницы
+└── styles/       # глобальные стили и SCSS-хелперы
+```
+
+## План развития
+
+- добавить i18n для русского и казахского языков;
+- закончить мобильную версию footer;
+- добавить subheader и каталог;
+- создать карточки и страницы товаров;
+- добавить логику поиска, корзины, избранного и авторизации;
+- добавить тесты.
+
+## Дисклеймер
+
+Этот репозиторий создан исключительно в учебных целях, не связан с Flip.kz и не является официальным продуктом.
