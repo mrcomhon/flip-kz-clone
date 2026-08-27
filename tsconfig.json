@@ -11,9 +11,6 @@
     "noEmit": true,
     "isolatedModules": true,
 
-    "allowJs": true,
-    "checkJs": false,
-
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
