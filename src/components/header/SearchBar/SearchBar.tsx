@@ -4,11 +4,7 @@ import styles from "./SearchBar.module.scss";
 export function SearchBar() {
   return (
     <div className={styles.searchBar}>
-      <form
-        action="/search"
-        name="search"
-        className={styles.searchForm}
-      >
+      <form action="/search" name="search" className={styles.searchForm}>
         <input
           className={styles.searchInput}
           type="search"
@@ -16,14 +12,10 @@ export function SearchBar() {
           name="search"
           placeholder="Поиск на FlipClone: 1 000 000 товаров"
         />
-        <button
-          className={styles.buttonSearch}
-          title="Поиск"
-          type="submit"
-        >
+        <button className={styles.buttonSearch} title="Поиск" type="submit">
           <SearchIcon />
         </button>
       </form>
     </div>
-  )
+  );
 }
