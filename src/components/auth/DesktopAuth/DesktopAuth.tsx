@@ -1,14 +1,28 @@
 import { AuthDropdown } from "@/components/auth/AuthDropdown";
 import styles from "./DesktopAuth.module.scss";
+import type { FocusEvent } from "react";
 
-export function DesktopAuth({onOpen, onClose, isModalOpen}) {
-  const handleBlur = (event) => {
-    if (event.relatedTarget && event.currentTarget.contains(event.relatedTarget)) {
+type DesktopAuthProps = {
+  onOpen: () => void;
+  onClose: () => void;
+  isModalOpen: boolean;
+};
+
+export function DesktopAuth({
+  onOpen,
+  onClose,
+  isModalOpen,
+}: DesktopAuthProps) {
+  const handleBlur = (event: FocusEvent<HTMLDivElement>) => {
+    if (
+      event.relatedTarget &&
+      event.currentTarget.contains(event.relatedTarget)
+    ) {
       return;
     }
 
     onClose();
-  }
+  };
 
   return (
     <div
@@ -18,17 +32,15 @@ export function DesktopAuth({onOpen, onClose, isModalOpen}) {
       onFocus={onOpen}
       onBlur={handleBlur}
     >
-      <button
-        className={`${styles.auth} reset-button`}
-      >
+      <button className={`${styles.auth} reset-button`}>
         <div className="p500">Войти</div>
         <div className="p300">Мой раздел</div>
       </button>
-      {isModalOpen &&
+      {isModalOpen && (
         <div onFocus={onOpen}>
           <AuthDropdown />
         </div>
-      }
+      )}
     </div>
-  )
+  );
 }

@@ -8,9 +8,9 @@ export function UserMenu() {
   return (
     <div className={styles.userMenu}>
       <Auth />
-      <LangSwitcher className="hidden-tablet"/>
+      <LangSwitcher className="hidden-tablet" />
       <Favorite />
       <Cart />
     </div>
-  )
+  );
 }

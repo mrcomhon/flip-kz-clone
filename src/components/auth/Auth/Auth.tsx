@@ -7,10 +7,10 @@ import styles from "./Auth.module.scss";
 export function Auth() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openMenu = () => setIsModalOpen(true)
-  const closeMenu = () => setIsModalOpen(false)
+  const openMenu = () => setIsModalOpen(true);
+  const closeMenu = () => setIsModalOpen(false);
 
-  useDarkenBackground(isModalOpen)
+  useDarkenBackground(isModalOpen);
 
   return (
     <div className={styles.authHover}>
@@ -21,5 +21,6 @@ export function Auth() {
       />
 
       <MobileAuth />
-    </div>)
+    </div>
+  );
 }
