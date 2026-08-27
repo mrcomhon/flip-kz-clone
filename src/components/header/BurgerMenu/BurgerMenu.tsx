@@ -5,19 +5,21 @@ import { LangSwitcher } from "@/components/header/LangSwitcher";
 import { MenuList } from "@/components/header/MenuList";
 import { CloseButton } from "@/components/ui/CloseButton";
 import styles from "./BurgerMenu.module.scss";
+import type { KeyboardEvent } from "react";
 
-export function BurgerMenu({onClose}) {
-  const onEscape = (e) => {
-    if (e.key === 'Escape') {
-      onClose()
+type BurgerMenuProps = {
+  onClose: () => void;
+};
+
+export function BurgerMenu({ onClose }: BurgerMenuProps) {
+  const onEscape = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Escape") {
+      onClose();
     }
-  }
+  };
 
   return (
-    <div
-      className={styles.modalOverlay}
-      onClick={onClose}
-    >
+    <div className={styles.modalOverlay} onClick={onClose}>
       <FocusLock>
         <div
           className={styles.burgerMenu}
@@ -28,13 +30,10 @@ export function BurgerMenu({onClose}) {
             <LangSwitcher />
             <CloseButton onClose={onClose} />
           </div>
-          <a
-            href="#"
-            className={styles.auth}
-          >
+          <a href="#" className={styles.auth}>
             <img
               src={profileImg}
-              className={clsx('img-circle')}
+              className={clsx("img-circle")}
               alt=""
               width="64"
               height="64"
@@ -46,5 +45,5 @@ export function BurgerMenu({onClose}) {
         </div>
       </FocusLock>
     </div>
-  )
+  );
 }
