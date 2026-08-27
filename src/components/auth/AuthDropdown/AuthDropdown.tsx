@@ -21,5 +21,5 @@ export function AuthDropdown() {
         </li>
       </ul>
     </div>
-  )
+  );
 }
