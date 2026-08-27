@@ -7,9 +7,30 @@ import Telegram from "@/assets/footer/telegram.svg?react";
 import Instagram from "@/assets/footer/instagram.svg?react";
 import Tiktok from "@/assets/footer/tiktok.svg?react";
 import Threads from "@/assets/footer/threads.svg?react";
+import type { ComponentType, SVGProps } from "react";
+
+type FooterLink = {
+  key: string;
+  href: string;
+  label: string;
+};
+
+type FooterColumn = {
+  key: string;
+  links: FooterLink[];
+};
+
+type SVGIcon = ComponentType<SVGProps<SVGSVGElement>>;
+
+type FooterSocial = {
+  key: string;
+  href: string;
+  label: string;
+  src: SVGIcon;
+};
 
 export function Footer() {
-  const columns = [
+  const columns: FooterColumn[] = [
     {
       key: "first",
       links: [
@@ -82,7 +103,7 @@ export function Footer() {
     },
   ];
 
-  const socials = [
+  const socials: FooterSocial[] = [
     {
       key: "telegram",
       href: "#",
@@ -115,11 +136,7 @@ export function Footer() {
         <div className={styles.limit}>
           <div className={styles.footerFlex}>
             {columns.map((column) => (
-              <ul
-                key={column.key}
-                className={styles.anchorList}
-                role="list"
-              >
+              <ul key={column.key} className={styles.anchorList} role="list">
                 {column.links.map((link) => {
                   return (
                     <li key={link.key}>
