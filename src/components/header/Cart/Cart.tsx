@@ -10,5 +10,5 @@ export function Cart() {
         <div className="p300">2 товара</div>
       </div>
     </a>
-  )
+  );
 }
