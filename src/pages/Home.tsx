@@ -4,10 +4,10 @@ import { Header } from "@/components/layout/Header";
 function HomePage() {
   return (
     <>
-    <Header />
-    <Footer />
+      <Header />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
