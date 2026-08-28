@@ -1,24 +1,48 @@
 import styles from "./AuthDropdown.module.scss";
 
+type DropdownMenuItem = {
+  id: string;
+  href: string;
+  label: string;
+};
+
 export function AuthDropdown() {
+  const menuItems: DropdownMenuItem[] = [
+    {
+      id: "register",
+      href: "#",
+      label: "Войти / Регистрация",
+    },
+    {
+      id: "section",
+      href: "#",
+      label: "Мой раздел",
+    },
+    {
+      id: "orders",
+      href: "#",
+      label: "Мои заказы",
+    },
+    {
+      id: "contacts",
+      href: "#",
+      label: "Контакты",
+    },
+    {
+      id: "help",
+      href: "#",
+      label: "Помощь",
+    },
+  ];
+
   return (
-    <div className={styles.dropdownMenu}>
+    <div className={styles.menuItems}>
       <ul>
-        <li>
-          <a href="#">Войти / Регистрация</a>
-        </li>
-        <li>
-          <a href="#">Мой раздел</a>
-        </li>
-        <li>
-          <a href="#">Мои заказы</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-        <li>
-          <a href="#">Помощь</a>
-        </li>
+        {menuItems.map((item) => (
+          <li key={item.id}>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );
