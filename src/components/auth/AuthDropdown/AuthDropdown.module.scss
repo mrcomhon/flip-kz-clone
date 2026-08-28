@@ -1,4 +1,4 @@
-.dropdownMenu {
+.menuItems {
   position: absolute;
   border-top: none;
   width: toRem(220);
@@ -8,7 +8,7 @@
   background-color: var(--color-white);
 }
 
-.dropdownMenu::before {
+.menuItems::before {
   content: '';
   display: block;
   position: absolute;
@@ -28,18 +28,18 @@
   background-clip: border-box;
 }
 
-.dropdownMenu ul {
+.menuItems ul {
   padding: 0;
   text-decoration: none;
 }
 
-.dropdownMenu ul li {
+.menuItems ul li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.dropdownMenu ul li a {
+.menuItems ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
