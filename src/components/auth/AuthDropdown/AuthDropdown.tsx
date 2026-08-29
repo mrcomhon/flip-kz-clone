@@ -6,35 +6,35 @@ type DropdownMenuItem = {
   label: string;
 };
 
-export function AuthDropdown() {
-  const menuItems: DropdownMenuItem[] = [
-    {
-      id: "register",
-      href: "#",
-      label: "Войти / Регистрация",
-    },
-    {
-      id: "section",
-      href: "#",
-      label: "Мой раздел",
-    },
-    {
-      id: "orders",
-      href: "#",
-      label: "Мои заказы",
-    },
-    {
-      id: "contacts",
-      href: "#",
-      label: "Контакты",
-    },
-    {
-      id: "help",
-      href: "#",
-      label: "Помощь",
-    },
-  ];
+const menuItems: DropdownMenuItem[] = [
+  {
+    id: "register",
+    href: "#",
+    label: "Войти / Регистрация",
+  },
+  {
+    id: "section",
+    href: "#",
+    label: "Мой раздел",
+  },
+  {
+    id: "orders",
+    href: "#",
+    label: "Мои заказы",
+  },
+  {
+    id: "contacts",
+    href: "#",
+    label: "Контакты",
+  },
+  {
+    id: "help",
+    href: "#",
+    label: "Помощь",
+  },
+];
 
+export function AuthDropdown() {
   return (
     <div className={styles.menuItems}>
       <ul>
