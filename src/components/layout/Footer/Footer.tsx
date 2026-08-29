@@ -29,107 +29,107 @@ type FooterSocial = {
   src: SVGIcon;
 };
 
+const columns: FooterColumn[] = [
+  {
+    key: "first",
+    links: [
+      {
+        key: "help",
+        href: "#",
+        label: "Помощь",
+      },
+      {
+        key: "delivery",
+        href: "#",
+        label: "Способы доставки",
+      },
+      {
+        key: "return",
+        href: "#",
+        label: "Возврат",
+      },
+      {
+        key: "gift",
+        href: "#",
+        label: "Подарочные карты",
+      },
+    ],
+  },
+  {
+    key: "second",
+    links: [
+      {
+        key: "about",
+        href: "#",
+        label: "О компании",
+      },
+      {
+        key: "contacts",
+        href: "#",
+        label: "Контакты",
+      },
+      {
+        key: "job",
+        href: "#",
+        label: "Вакансии",
+      },
+    ],
+  },
+  {
+    key: "third",
+    links: [
+      {
+        key: "orders",
+        href: "#",
+        label: "Отправляй посылки",
+      },
+      {
+        key: "business",
+        href: "#",
+        label: "Покупай для бизнеса",
+      },
+      {
+        key: "point",
+        href: "#",
+        label: "Открой Flip Point",
+      },
+      {
+        key: "seller",
+        href: "#",
+        label: "Продавай на Flip",
+      },
+    ],
+  },
+];
+
+const socials: FooterSocial[] = [
+  {
+    key: "telegram",
+    href: "#",
+    label: "Telegram",
+    src: Telegram,
+  },
+  {
+    key: "instagram",
+    href: "#",
+    label: "Instagram",
+    src: Instagram,
+  },
+  {
+    key: "tiktok",
+    href: "#",
+    label: "TikTok",
+    src: Tiktok,
+  },
+  {
+    key: "threads",
+    href: "#",
+    label: "Threads",
+    src: Threads,
+  },
+];
+
 export function Footer() {
-  const columns: FooterColumn[] = [
-    {
-      key: "first",
-      links: [
-        {
-          key: "help",
-          href: "#",
-          label: "Помощь",
-        },
-        {
-          key: "delivery",
-          href: "#",
-          label: "Способы доставки",
-        },
-        {
-          key: "return",
-          href: "#",
-          label: "Возврат",
-        },
-        {
-          key: "gift",
-          href: "#",
-          label: "Подарочные карты",
-        },
-      ],
-    },
-    {
-      key: "second",
-      links: [
-        {
-          key: "about",
-          href: "#",
-          label: "О компании",
-        },
-        {
-          key: "contacts",
-          href: "#",
-          label: "Контакты",
-        },
-        {
-          key: "job",
-          href: "#",
-          label: "Вакансии",
-        },
-      ],
-    },
-    {
-      key: "third",
-      links: [
-        {
-          key: "orders",
-          href: "#",
-          label: "Отправляй посылки",
-        },
-        {
-          key: "business",
-          href: "#",
-          label: "Покупай для бизнеса",
-        },
-        {
-          key: "point",
-          href: "#",
-          label: "Открой Flip Point",
-        },
-        {
-          key: "seller",
-          href: "#",
-          label: "Продавай на Flip",
-        },
-      ],
-    },
-  ];
-
-  const socials: FooterSocial[] = [
-    {
-      key: "telegram",
-      href: "#",
-      label: "Telegram",
-      src: Telegram,
-    },
-    {
-      key: "instagram",
-      href: "#",
-      label: "Instagram",
-      src: Instagram,
-    },
-    {
-      key: "tiktok",
-      href: "#",
-      label: "TikTok",
-      src: Tiktok,
-    },
-    {
-      key: "threads",
-      href: "#",
-      label: "Threads",
-      src: Threads,
-    },
-  ];
-
   return (
     <footer className={styles.footer}>
       <Container>
