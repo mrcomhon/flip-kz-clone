@@ -17,69 +17,69 @@ type MenuListItem = {
   isLocation?: boolean;
 };
 
-export function MenuList() {
-  const menuItems: MenuListItem[] = [
-    {
-      id: "catalog",
-      href: "#",
-      icon: <MdWindow />,
-      label: "Каталог",
-    },
-    {
-      id: "discounts",
-      href: "#",
-      icon: <BsFire />,
-      label: "Скидки и акции",
-    },
-    {
-      id: "gifts",
-      href: "#",
-      hasDivider: true,
-      icon: <BsFillCreditCardFill />,
-      label: "Подарочные карты",
-    },
-    {
-      id: "city",
-      href: "#",
-      isLocation: true,
-      icon: <ImLocation />,
-      label: "Алматы",
-    },
-    {
-      id: "cart",
-      href: "#",
-      hasDivider: true,
-      icon: <IoCart />,
-      label: "Корзина",
-    },
-    {
-      id: "favorite",
-      href: "#",
-      hasDivider: true,
-      icon: <IoMdHeart />,
-      label: "Избранное",
-    },
-    {
-      id: "help",
-      href: "#",
-      icon: <MdHelp />,
-      label: "Помощь",
-    },
-    {
-      id: "delivery",
-      href: "#",
-      icon: <BiLogoTelegram />,
-      label: "Способы доставки",
-    },
-    {
-      id: "payment",
-      href: "#",
-      hasDivider: true,
-      icon: <BsCurrencyDollar />,
-      label: "Способы оплаты",
-    },
-  ];
+const menuItems: MenuListItem[] = [
+  {
+    id: "catalog",
+    href: "#",
+    icon: <MdWindow />,
+    label: "Каталог",
+  },
+  {
+    id: "discounts",
+    href: "#",
+    icon: <BsFire />,
+    label: "Скидки и акции",
+  },
+  {
+    id: "gifts",
+    href: "#",
+    hasDivider: true,
+    icon: <BsFillCreditCardFill />,
+    label: "Подарочные карты",
+  },
+  {
+    id: "city",
+    href: "#",
+    isLocation: true,
+    icon: <ImLocation />,
+    label: "Алматы",
+  },
+  {
+    id: "cart",
+    href: "#",
+    hasDivider: true,
+    icon: <IoCart />,
+    label: "Корзина",
+  },
+  {
+    id: "favorite",
+    href: "#",
+    hasDivider: true,
+    icon: <IoMdHeart />,
+    label: "Избранное",
+  },
+  {
+    id: "help",
+    href: "#",
+    icon: <MdHelp />,
+    label: "Помощь",
+  },
+  {
+    id: "delivery",
+    href: "#",
+    icon: <BiLogoTelegram />,
+    label: "Способы доставки",
+  },
+  {
+    id: "payment",
+    href: "#",
+    hasDivider: true,
+    icon: <BsCurrencyDollar />,
+    label: "Способы оплаты",
+  },
+];
 
+export function MenuList() {
   return (
     <ul className={styles.list}>
       {menuItems.map((item) => (
