@@ -11,6 +11,7 @@ i18n.use(initReactI18next).init({
   },
   lng: "ru",
   fallbackLng: "ru",
+  supportedLngs: ["kk", "ru"],
   interpolation: { escapeValue: false },
 });
 
