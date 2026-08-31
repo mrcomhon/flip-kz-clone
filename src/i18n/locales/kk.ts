@@ -43,6 +43,34 @@ const kk = {
       paymentMethods: "Төлем тәсілдері",
     },
   },
+
+  footer: {
+    links: {
+      help: "Көмек",
+      delivery: "Жеткізу тәсілдері",
+      return: "Қайтару",
+      gift: "Сыйлық карталары",
+      about: "Компания туралы",
+      contacts: "Байланыстар",
+      job: "Бос орындар",
+      orders: "Сәлемдемелерді жіберіңіз",
+      business: "Бизнес үшін сатып ал",
+      point: "Flip Point-ті ашыңыз",
+      seller: "Flip-те сату",
+    },
+
+    socials: {
+      ariaLabel: "Әлеуметтік желілер",
+    },
+
+    download: {
+      prompt: "Камераны бағыттап, қосымшаны жүктеңіз",
+      googlePlay: "Google Play-ден жүктеп алу",
+      appStore: "App Store-дан жүктеп алу",
+    },
+
+    copyright: "© 2007–2026 FlipClone.kz ЖШС",
+  },
 } satisfies Locale;
 
 export default kk;
