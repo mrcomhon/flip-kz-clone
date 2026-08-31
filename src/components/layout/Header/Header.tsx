@@ -1,6 +1,7 @@
 import { LogoWrapper } from "@/components/header/LogoWrapper";
 import { SearchBar } from "@/components/header/SearchBar";
 import { UserMenu } from "@/components/header/UserMenu";
+import { Location } from "@/components/header/Location";
 import styles from "./Header.module.scss";
 import { Container } from "../Container";
 
@@ -11,6 +12,7 @@ export function Header() {
         <Container>
           <nav className={styles.navigation}>
             <LogoWrapper />
+            <Location />
             <SearchBar />
             <UserMenu />
           </nav>
@@ -20,17 +22,13 @@ export function Header() {
         <Container className={styles.mobileContainer}>
           <nav className={styles.mobileNavigation}>
             <div className={styles.headerTop}>
-              <LogoWrapper LocationClass="hide-tab" />
+              <LogoWrapper />
               <UserMenu />
             </div>
             <SearchBar />
           </nav>
         </Container>
-        <LogoWrapper
-          LocationClass="visible-tablet"
-          LogoClass="hide-tab visually-hidden"
-          BurgerClass="hide-tab visually-hidden"
-        />
+        <Location className={styles.mobilePadding} />
       </div>
     </header>
   );
