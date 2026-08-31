@@ -1,4 +1,5 @@
 import { AuthDropdown } from "@/components/auth/AuthDropdown";
+import { useTranslation } from "react-i18next";
 import styles from "./DesktopAuth.module.scss";
 import type { FocusEvent } from "react";
 
@@ -13,6 +14,8 @@ export function DesktopAuth({
   onClose,
   isModalOpen,
 }: DesktopAuthProps) {
+  const { t } = useTranslation();
+
   const handleBlur = (event: FocusEvent<HTMLDivElement>) => {
     if (
       event.relatedTarget &&
@@ -33,8 +36,8 @@ export function DesktopAuth({
       onBlur={handleBlur}
     >
       <button className={`${styles.auth} reset-button`}>
-        <div className="p500">Войти</div>
-        <div className="p300">Мой раздел</div>
+        <div className="p500">{t("header.auth.login")}</div>
+        <div className="p300">{t("header.auth.mySection")}</div>
       </button>
       {isModalOpen && (
         <div onFocus={onOpen}>
