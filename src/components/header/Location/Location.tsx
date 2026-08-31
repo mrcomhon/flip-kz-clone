@@ -17,9 +17,7 @@ export function Location({ className }: LocationProps) {
       </span>
       <div className={styles.gapRow}>
         <LocationIcon className={`${styles.icon} hidden-tablet`} />
-        <div className="p500 hidden-tablet">
-          {t("header.location.address")}
-        </div>
+        <div className="p500 hidden-tablet">{t("header.location.address")}</div>
 
         <LocationIcon className={`${styles.icon} visible-tablet`} />
         <span className={`${styles.city} p500 visible-tablet`}>

@@ -33,10 +33,6 @@
   display: flex;
   align-items: center;
   gap: toRem(4);
-
-  @include tablet {
-    padding-left: toRem(12);
-  }
 }
 
 .mobileAddress {
