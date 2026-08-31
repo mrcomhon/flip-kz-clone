@@ -6,12 +6,15 @@ import { MenuList } from "@/components/header/MenuList";
 import { CloseButton } from "@/components/ui/CloseButton";
 import styles from "./BurgerMenu.module.scss";
 import type { KeyboardEvent } from "react";
+import { useTranslation } from "react-i18next";
 
 type BurgerMenuProps = {
   onClose: () => void;
 };
 
 export function BurgerMenu({ onClose }: BurgerMenuProps) {
+  const { t } = useTranslation();
+
   const onEscape = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Escape") {
       onClose();
@@ -39,7 +42,7 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
               height="64"
               loading="lazy"
             />
-            <strong>Войти / Регистрация</strong>
+            <strong>{t("header.auth.loginOrRegister")}</strong>
           </a>
           <MenuList />
         </div>

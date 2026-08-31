@@ -7,12 +7,14 @@ import { IoCart } from "react-icons/io5";
 import { IoMdHeart } from "react-icons/io";
 import { BiLogoTelegram } from "react-icons/bi";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import type { Locale } from "@/i18n/locales/ru";
 
 type MenuListItem = {
   id: string;
   href: string;
   icon: ReactElement;
-  label: string;
+  translationKey: keyof Locale["header"]["menu"];
   hasDivider?: boolean;
   isLocation?: boolean;
 };
@@ -22,71 +24,75 @@ const menuItems: MenuListItem[] = [
     id: "catalog",
     href: "#",
     icon: <MdWindow />,
-    label: "Каталог",
+    translationKey: "catalog",
   },
   {
     id: "discounts",
     href: "#",
     icon: <BsFire />,
-    label: "Скидки и акции",
+    translationKey: "discounts",
   },
   {
     id: "gifts",
     href: "#",
     hasDivider: true,
     icon: <BsFillCreditCardFill />,
-    label: "Подарочные карты",
+    translationKey: "giftCards",
   },
   {
     id: "city",
     href: "#",
     isLocation: true,
     icon: <ImLocation />,
-    label: "Алматы",
+    translationKey: "city",
   },
   {
     id: "cart",
     href: "#",
     hasDivider: true,
     icon: <IoCart />,
-    label: "Корзина",
+    translationKey: "cart",
   },
   {
     id: "favorite",
     href: "#",
     hasDivider: true,
     icon: <IoMdHeart />,
-    label: "Избранное",
+    translationKey: "favorites",
   },
   {
     id: "help",
     href: "#",
     icon: <MdHelp />,
-    label: "Помощь",
+    translationKey: "help",
   },
   {
     id: "delivery",
     href: "#",
     icon: <BiLogoTelegram />,
-    label: "Способы доставки",
+    translationKey: "deliveryMethods",
   },
   {
     id: "payment",
     href: "#",
     hasDivider: true,
     icon: <BsCurrencyDollar />,
-    label: "Способы оплаты",
+    translationKey: "paymentMethods",
   },
 ];
 
 export function MenuList() {
+  const { t } = useTranslation();
+
   return (
     <ul className={styles.list}>
       {menuItems.map((item) => (
         <li key={item.id} className={clsx(item.hasDivider && styles.last)}>
           <a href={item.href} className={styles.item}>
             {item.icon}
-            <p className={clsx(item.isLocation && styles.city)}>{item.label}</p>
+            <p className={clsx(item.isLocation && styles.city)}>
+              {t(`header.menu.${item.translationKey}`)}
+            </p>
           </a>
         </li>
       ))}
