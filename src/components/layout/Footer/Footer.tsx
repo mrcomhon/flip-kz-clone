@@ -8,11 +8,13 @@ import Instagram from "@/assets/footer/instagram.svg?react";
 import Tiktok from "@/assets/footer/tiktok.svg?react";
 import Threads from "@/assets/footer/threads.svg?react";
 import type { ComponentType, SVGProps } from "react";
+import { useTranslation } from "react-i18next";
+import type { Locale } from "@/i18n/locales/ru";
 
 type FooterLink = {
   key: string;
   href: string;
-  label: string;
+  label: keyof Locale["footer"]["links"];
 };
 
 type FooterColumn = {
@@ -36,22 +38,22 @@ const columns: FooterColumn[] = [
       {
         key: "help",
         href: "#",
-        label: "Помощь",
+        label: "help",
       },
       {
         key: "delivery",
         href: "#",
-        label: "Способы доставки",
+        label: "delivery",
       },
       {
         key: "return",
         href: "#",
-        label: "Возврат",
+        label: "return",
       },
       {
         key: "gift",
         href: "#",
-        label: "Подарочные карты",
+        label: "gift",
       },
     ],
   },
@@ -61,17 +63,17 @@ const columns: FooterColumn[] = [
       {
         key: "about",
         href: "#",
-        label: "О компании",
+        label: "about",
       },
       {
         key: "contacts",
         href: "#",
-        label: "Контакты",
+        label: "contacts",
       },
       {
         key: "job",
         href: "#",
-        label: "Вакансии",
+        label: "job",
       },
     ],
   },
@@ -81,22 +83,22 @@ const columns: FooterColumn[] = [
       {
         key: "orders",
         href: "#",
-        label: "Отправляй посылки",
+        label: "orders",
       },
       {
         key: "business",
         href: "#",
-        label: "Покупай для бизнеса",
+        label: "business",
       },
       {
         key: "point",
         href: "#",
-        label: "Открой Flip Point",
+        label: "point",
       },
       {
         key: "seller",
         href: "#",
-        label: "Продавай на Flip",
+        label: "seller",
       },
     ],
   },
@@ -130,6 +132,8 @@ const socials: FooterSocial[] = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footer}>
       <Container>
@@ -140,14 +144,17 @@ export function Footer() {
                 {column.links.map((link) => {
                   return (
                     <li key={link.key}>
-                      <a href={link.href}>{link.label}</a>
+                      <a href={link.href}>{t(`footer.links.${link.label}`)}</a>
                     </li>
                   );
                 })}
               </ul>
             ))}
 
-            <nav className={styles.soc1als} aria-label="Социальные сети">
+            <nav
+              className={styles.soc1als}
+              aria-label={t("footer.socials.ariaLabel")}
+            >
               <ul className={styles.soc1alList} role="list">
                 {socials.map((social) => {
                   const Icon = social.src;
@@ -175,16 +182,16 @@ export function Footer() {
               <QR className={styles.qr} aria-hidden="true" focusable="false" />
 
               <div className={styles.contentBlock}>
-                <p>Наведите камеру — скачайте приложение</p>
+                <p>{t("footer.download.prompt")}</p>
                 <div className={styles.app}>
-                  <a href="#" aria-label="Скачать в Google Play">
+                  <a href="#" aria-label={t("footer.download.googlePlay")}>
                     <GooglePlay
                       className={styles.googlePlay}
                       aria-hidden="true"
                       focusable="false"
                     />
                   </a>
-                  <a href="#" aria-label="Скачать в App Store">
+                  <a href="#" aria-label={t("footer.download.appStore")}>
                     <AppStore
                       className={styles.appStore}
                       aria-hidden="true"
@@ -195,7 +202,7 @@ export function Footer() {
               </div>
             </div>
           </div>
-          <p className={styles.copyright}>© 2007–2026 ТОО FlipClone.kz</p>
+          <p className={styles.copyright}>{t("footer.copyright")}</p>
         </div>
       </Container>
     </footer>

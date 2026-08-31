@@ -41,6 +41,34 @@ const ru = {
       paymentMethods: "Способы оплаты",
     },
   },
+
+  footer: {
+    links: {
+      help: "Помощь",
+      delivery: "Способы доставки",
+      return: "Возврат",
+      gift: "Подарочные карты",
+      about: "О компании",
+      contacts: "Контакты",
+      job: "Вакансии",
+      orders: "Отправляй посылки",
+      business: "Покупай для бизнеса",
+      point: "Открой Flip Point",
+      seller: "Продавай на Flip",
+    },
+
+    socials: {
+      ariaLabel: "Социальные сети",
+    },
+
+    download: {
+      prompt: "Наведите камеру — скачайте приложение",
+      googlePlay: "Скачать в Google Play",
+      appStore: "Скачать в App Store",
+    },
+
+    copyright: "© 2007–2026 ТОО FlipClone.kz",
+  },
 };
 
 export type Locale = typeof ru;
