@@ -1,0 +1,129 @@
+type ProductSection = {
+  key: string;
+  name: string;
+  items: ProductType[];
+};
+
+export type ProductType = {
+  id: number;
+  price: number;
+  name: string;
+  description?: string;
+};
+
+const productSections: ProductSection[] = [
+  {
+    key: "first",
+    name: "Lego",
+    items: [
+      {
+        id: 1,
+        price: 200,
+        name: "Banka",
+        description: "Banka steklo",
+      },
+      {
+        id: 4,
+        price: 1500,
+        name: "Lego Star Wars Millennium Falcon",
+        description:
+          "Легендарный космический корабль из вселенной Звездных Войн.",
+      },
+      {
+        id: 5,
+        price: 850,
+        name: "Lego Technic Porsche 911",
+        description:
+          "Коллекционная модель спортивного автомобиля с высокой детализацией.",
+      },
+      {
+        id: 6,
+        price: 350,
+        name: "Lego City Police Station",
+        description:
+          "Игровой набор с полицейским участком, вертолетом и фигурками.",
+      },
+      {
+        id: 7,
+        price: 600,
+        name: "Lego Harry Potter Hogwarts Castle",
+        description:
+          "Миниатюрная копия замка Хогвартс для настоящих фанатов магии.",
+      },
+    ],
+  },
+  {
+    key: "second",
+    name: "Одежда",
+    items: [
+      {
+        id: 2,
+        price: 300,
+        name: "Куртка оверсайз",
+        description: "Удобная зимняя куртка с водоотталкивающим покрытием.",
+      },
+      {
+        id: 8,
+        price: 150,
+        name: "Худи хлопковое",
+        description: "Мягкое худи с начесом и карманом-кенгуру.",
+      },
+      {
+        id: 9,
+        price: 250,
+        name: "Джинсы классические",
+        description: "Прямые синие джинсы из плотного денима.",
+      },
+      {
+        id: 10,
+        price: 80,
+        name: "Футболка базовая",
+        description: "Однотонная футболка из 100% хлопка.",
+      },
+      {
+        id: 11,
+        price: 180,
+        name: "Спортивные брюки",
+        description: "Легкие джоггеры для тренировок и отдыха.",
+      },
+    ],
+  },
+  {
+    key: "third",
+    name: "Разное",
+    items: [
+      {
+        id: 3,
+        price: 500,
+        name: "Беспроводные наушники",
+        description: "Наушники с активным шумоподавлением и мощным басом.",
+      },
+      {
+        id: 12,
+        price: 1200,
+        name: "Умные часы",
+        description: "Фитнес-трекер с AMOLED экраном и датчиком пульса.",
+      },
+      {
+        id: 13,
+        price: 450,
+        name: "Портативная колонка",
+        description: "Влагозащищенная колонка с чистым звуком на 10 Вт.",
+      },
+      {
+        id: 14,
+        price: 250,
+        name: "Внешний аккумулятор (Powerbank)",
+        description: "Батарея на 20 000 мАч с поддержкой быстрой зарядки.",
+      },
+      {
+        id: 15,
+        price: 150,
+        name: "Настольная LED лампа",
+        description: "Стильная лампа с регулировкой яркости и цвета света.",
+      },
+    ],
+  },
+];
+
+export default productSections;
