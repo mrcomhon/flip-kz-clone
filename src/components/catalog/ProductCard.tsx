@@ -1,4 +1,5 @@
 import type { ProductType } from "./productData";
+import styles from "./ProductCard.module.scss";
 
 type ProductCardProps = {
   product: ProductType;
@@ -6,17 +7,20 @@ type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <article>
+    <article className={styles.card}>
       <img
+        className={styles.image}
         src={product.image}
         alt={product.name}
-        width="200"
-        height="200"
+        width={640}
+        height={640}
         loading="lazy"
       />
-      <p>{product.price}</p>
-      <h3>{product.name}</h3>
-      {product.description && <p>{product.description}</p>}
+      <p className={styles.price}>{product.price} ₸</p>
+      <h3 className={styles.name}>{product.name}</h3>
+      {product.description && (
+        <p className={styles.description}>{product.description}</p>
+      )}
     </article>
   );
 }
