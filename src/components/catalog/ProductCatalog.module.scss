@@ -1,0 +1,34 @@
+.section {
+  padding-block: toRem(20);
+}
+
+.title {
+  margin-bottom: toRem(10);
+  color: var(--color-blue-deep);
+  font-size: toRem(20);
+  font-weight: 700;
+  line-height: toRem(24);
+}
+
+.ul {
+  display: grid;
+  gap: toRem(10);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    min-width: 0;
+  }
+}
+
+.ulSlider {
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(toRem(250), 1fr);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.ulGrid {
+  grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+}
