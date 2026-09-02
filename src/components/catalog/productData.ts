@@ -1,3 +1,19 @@
+import athleticJoggers from "@/assets/products/athletic-joggers.webp";
+import basicTshirt from "@/assets/products/basic-tshirt.webp";
+import brickPoliceStation from "@/assets/products/brick-police-station.webp";
+import brickSpaceFreighter from "@/assets/products/brick-space-freighter.webp";
+import brickSportsCar from "@/assets/products/brick-sports-car.webp";
+import brickWizardCastle from "@/assets/products/brick-wizard-castle.webp";
+import classicJeans from "@/assets/products/classic-jeans.webp";
+import cottonHoodie from "@/assets/products/cotton-hoodie.webp";
+import glass from "@/assets/products/glass-jar.webp";
+import ledDeskLamp from "@/assets/products/led-desk-lamp.webp";
+import oversizedJacket from "@/assets/products/oversized-jacket.webp";
+import portableSpeaker from "@/assets/products/portable-speaker.webp";
+import powerBank from "@/assets/products/power-bank.webp";
+import smartWatch from "@/assets/products/smart-watch.webp";
+import wirelessHeadphones from "@/assets/products/wireless-headphones.webp";
+
 type ProductSection = {
   key: string;
   name: string;
@@ -6,6 +22,7 @@ type ProductSection = {
 
 export type ProductType = {
   id: number;
+  image: string;
   price: number;
   name: string;
   description?: string;
@@ -18,12 +35,14 @@ const productSections: ProductSection[] = [
     items: [
       {
         id: 1,
+        image: glass,
         price: 200,
         name: "Banka",
         description: "Banka steklo",
       },
       {
         id: 4,
+        image: brickSpaceFreighter,
         price: 1500,
         name: "Lego Star Wars Millennium Falcon",
         description:
@@ -31,6 +50,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 5,
+        image: brickSportsCar,
         price: 850,
         name: "Lego Technic Porsche 911",
         description:
@@ -38,6 +58,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 6,
+        image: brickPoliceStation,
         price: 350,
         name: "Lego City Police Station",
         description:
@@ -45,6 +66,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 7,
+        image: brickWizardCastle,
         price: 600,
         name: "Lego Harry Potter Hogwarts Castle",
         description:
@@ -58,30 +80,35 @@ const productSections: ProductSection[] = [
     items: [
       {
         id: 2,
+        image: oversizedJacket,
         price: 300,
         name: "Куртка оверсайз",
         description: "Удобная зимняя куртка с водоотталкивающим покрытием.",
       },
       {
         id: 8,
+        image: cottonHoodie,
         price: 150,
         name: "Худи хлопковое",
         description: "Мягкое худи с начесом и карманом-кенгуру.",
       },
       {
         id: 9,
+        image: classicJeans,
         price: 250,
         name: "Джинсы классические",
         description: "Прямые синие джинсы из плотного денима.",
       },
       {
         id: 10,
+        image: basicTshirt,
         price: 80,
         name: "Футболка базовая",
         description: "Однотонная футболка из 100% хлопка.",
       },
       {
         id: 11,
+        image: athleticJoggers,
         price: 180,
         name: "Спортивные брюки",
         description: "Легкие джоггеры для тренировок и отдыха.",
@@ -94,30 +121,35 @@ const productSections: ProductSection[] = [
     items: [
       {
         id: 3,
+        image: wirelessHeadphones,
         price: 500,
         name: "Беспроводные наушники",
         description: "Наушники с активным шумоподавлением и мощным басом.",
       },
       {
         id: 12,
+        image: smartWatch,
         price: 1200,
         name: "Умные часы",
         description: "Фитнес-трекер с AMOLED экраном и датчиком пульса.",
       },
       {
         id: 13,
+        image: portableSpeaker,
         price: 450,
         name: "Портативная колонка",
         description: "Влагозащищенная колонка с чистым звуком на 10 Вт.",
       },
       {
         id: 14,
+        image: powerBank,
         price: 250,
         name: "Внешний аккумулятор (Powerbank)",
         description: "Батарея на 20 000 мАч с поддержкой быстрой зарядки.",
       },
       {
         id: 15,
+        image: ledDeskLamp,
         price: 150,
         name: "Настольная LED лампа",
         description: "Стильная лампа с регулировкой яркости и цвета света.",
