@@ -9,6 +9,7 @@
   background-color: var(--color-white);
   border: var(--border);
   border-radius: var(--border-radius-small);
+  max-width: toRem(250);
 }
 
 .image {
