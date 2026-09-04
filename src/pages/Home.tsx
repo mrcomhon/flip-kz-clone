@@ -8,11 +8,18 @@ function HomePage() {
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
+  const handleSearchClear = () => {
+    setSearchQuery("");
+  };
 
   return (
     <>
-      <Header value={searchQuery} onSearchChange={handleSearchChange} />
-      <ProductCatalog value={searchQuery} />
+      <Header
+        value={searchQuery}
+        onSearchChange={handleSearchChange}
+        onClear={handleSearchClear}
+      />
+      <ProductCatalog searchQuery={searchQuery} />
       <Footer />
     </>
   );
