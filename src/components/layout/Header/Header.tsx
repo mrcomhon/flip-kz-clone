@@ -8,9 +8,10 @@ import { Container } from "../Container";
 export type HeaderProps = {
   value: string;
   onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClear: () => void;
 };
 
-export function Header({ value, onSearchChange }: HeaderProps) {
+export function Header({ value, onSearchChange, onClear }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
@@ -18,7 +19,11 @@ export function Header({ value, onSearchChange }: HeaderProps) {
           <nav className={styles.navigation}>
             <LogoWrapper />
             <Location />
-            <SearchBar value={value} onSearchChange={onSearchChange} />
+            <SearchBar
+              value={value}
+              onSearchChange={onSearchChange}
+              onClear={onClear}
+            />
             <UserMenu />
           </nav>
         </Container>
@@ -30,7 +35,11 @@ export function Header({ value, onSearchChange }: HeaderProps) {
               <LogoWrapper />
               <UserMenu />
             </div>
-            <SearchBar value={value} onSearchChange={onSearchChange} />
+            <SearchBar
+              value={value}
+              onSearchChange={onSearchChange}
+              onClear={onClear}
+            />
           </nav>
         </Container>
         <Location className={styles.mobilePadding} />
