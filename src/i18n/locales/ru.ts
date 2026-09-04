@@ -19,6 +19,7 @@ const ru = {
     search: {
       placeholder: "Поиск на FlipClone: 1 000 000 товаров",
       title: "Поиск",
+      clearButton: "Очистить поле",
     },
 
     auth: {
@@ -74,6 +75,10 @@ const ru = {
     },
 
     copyright: "© 2007–2026 ТОО FlipClone.kz",
+  },
+
+  product: {
+    notFound: "Ничего не найдено",
   },
 };
 
