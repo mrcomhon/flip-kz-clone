@@ -6,8 +6,8 @@ export function Logo() {
   const { t } = useTranslation();
 
   return (
-    <a href="/logo" title={t("header.logo.home")}>
-      <LogoIcon className={styles.logo} />
+    <a href="/" title={t("header.logo.home")}>
+      <LogoIcon className={styles.logo} aria-hidden="true" />
     </a>
   );
 }
