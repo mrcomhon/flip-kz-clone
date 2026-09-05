@@ -1,7 +1,7 @@
 import productSections from "./productData";
 import { Container } from "../layout/Container";
 import { ProductCard } from "./ProductCard";
-import styles from "./Product.module.scss";
+import styles from "./ProductCatalog.module.scss";
 import clsx from "clsx";
 
 export function ProductCatalog() {
