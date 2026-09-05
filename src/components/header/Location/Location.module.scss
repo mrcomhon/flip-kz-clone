@@ -35,6 +35,11 @@
   gap: toRem(4);
 }
 
+.mobileLocation {
+  display: flex;
+  gap: toRem(4);
+}
+
 .mobileAddress {
   text-decoration: none;
   color: var(--color-blue-grand);
