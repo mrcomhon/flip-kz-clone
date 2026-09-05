@@ -35,7 +35,7 @@ export function DesktopAuth({
       onFocus={onOpen}
       onBlur={handleBlur}
     >
-      <button className={`${styles.auth} reset-button`}>
+      <button type="button" className={`${styles.auth} reset-button`}>
         <div className="p500">{t("header.auth.login")}</div>
         <div className="p300">{t("header.auth.mySection")}</div>
       </button>
