@@ -8,6 +8,11 @@ export function useDarkenBackground(isOpen: boolean) {
       document.body.classList.remove("darken-bg");
     }
 
-    return () => document.body.classList.remove("darken-bg");
+    return () => {
+      document.body.classList.remove("darken-bg");
+      if (document.body.getAttribute("class") === "") {
+        document.body.removeAttribute("class")
+      }
+    };
   }, [isOpen]);
 }
