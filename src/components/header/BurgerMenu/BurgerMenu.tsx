@@ -28,10 +28,19 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
           className={styles.burgerMenu}
           onClick={(e) => e.stopPropagation()}
           onKeyDown={onEscape}
+          aria-modal="true"
+          role="dialog"
+          aria-labelledby="modalTitle"
         >
+          <h2 id="modalTitle" className="visually-hidden">
+            {t("header.burgerMenu.modalTitle")}
+          </h2>
           <div className={styles.header}>
             <LangSwitcher />
-            <CloseButton onClose={onClose} />
+            <CloseButton
+              onClose={onClose}
+              ariaLabel={t("header.burgerMenu.closeBurgerButton")}
+            />
           </div>
           <a href="#" className={styles.auth}>
             <img
