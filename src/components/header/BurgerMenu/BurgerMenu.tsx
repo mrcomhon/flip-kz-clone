@@ -5,7 +5,7 @@ import { LangSwitcher } from "@/components/header/LangSwitcher";
 import { MenuList } from "@/components/header/MenuList";
 import { CloseButton } from "@/components/ui/CloseButton";
 import styles from "./BurgerMenu.module.scss";
-import type { KeyboardEvent } from "react";
+import { useEffect, type KeyboardEvent } from "react";
 import { useTranslation } from "react-i18next";
 
 type BurgerMenuProps = {
@@ -21,9 +21,40 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
     }
   };
 
+  useEffect(() => {
+    const handleKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
+  useEffect(() => {
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+
+      if (document.body.getAttribute("style") === "") {
+        document.body.removeAttribute("style")
+      }
+    };
+  }, []);
+
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
-      <FocusLock>
+      <FocusLock returnFocus={true}>
         <div
           className={styles.burgerMenu}
           onClick={(e) => e.stopPropagation()}
