@@ -9,6 +9,8 @@
   gap: toRem(2);
 
   @include tablet-above {
+    min-width: toRem(170);
+
     @include hover {
       background-color: var(--color-blue-grand);
     }
