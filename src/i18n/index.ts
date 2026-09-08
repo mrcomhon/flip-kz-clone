@@ -14,10 +14,14 @@ export const resources = {
 i18n.use(initReactI18next).init({
   resources,
   defaultNS,
-  lng: "ru",
+  lng: document.documentElement.lang || "ru",
   fallbackLng: "ru",
   supportedLngs: ["kk", "ru"],
   interpolation: { escapeValue: false },
+});
+
+i18n.on("languageChanged", (lng) => {
+  document.documentElement.lang = lng;
 });
 
 export default i18n;
