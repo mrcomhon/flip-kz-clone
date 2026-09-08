@@ -6,6 +6,12 @@ const kk = {
       home: "Басты бет",
     },
 
+    burgerMenu: {
+      burgerButton: "Мәзірді ашу",
+      modalTitle: "Сайт мәзірі",
+      closeBurgerButton: "Мәзірді жабу",
+    },
+
     location: {
       city: "Астана",
       address: "Мекенжайды нақтылаңыз",

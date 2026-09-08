@@ -11,22 +11,29 @@ export function Location({ className }: LocationProps) {
   const { t } = useTranslation();
 
   return (
-    <button className={clsx(styles.location, className, "reset-button")}>
-      <span className={`${styles.city} p300 hidden-tablet`}>
-        {t("header.location.city")}
-      </span>
-      <div className={styles.gapRow}>
-        <LocationIcon className={`${styles.icon} hidden-tablet`} />
-        <div className="p500 hidden-tablet">{t("header.location.address")}</div>
-
-        <LocationIcon className={`${styles.icon} visible-tablet`} />
-        <span className={`${styles.city} p500 visible-tablet`}>
+    <button
+      className={clsx(styles.location, className, "reset-button")}
+      type="button"
+    >
+      <span className="hidden-tablet">
+        <span className={`${styles.city} p300`}>
           {t("header.location.city")}
         </span>
-        <a href="#" className={`${styles.mobileAddress} visible-tablet p500`}>
+        <span className={styles.gapRow}>
+          <LocationIcon className={styles.icon} aria-hidden="true" />
+          <span className="p500">{t("header.location.address")}</span>
+        </span>
+      </span>
+
+      <span className={clsx("visible-tablet", styles.mobileLocation)}>
+        <LocationIcon className={styles.icon} aria-hidden="true" />
+        <span className={`${styles.city} p500`}>
+          {t("header.location.city")}
+        </span>
+        <span className={`${styles.mobileAddress} p500`}>
           {t("header.location.mobileAddress")} ▾
-        </a>
-      </div>
+        </span>
+      </span>
     </button>
   );
 }
