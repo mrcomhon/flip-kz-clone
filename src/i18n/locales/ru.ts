@@ -4,6 +4,12 @@ const ru = {
       home: "Главная страница",
     },
 
+    burgerMenu: {
+      burgerButton: "Открыть меню",
+      modalTitle: "Меню сайта",
+      closeBurgerButton: "Закрыть меню",
+    },
+
     location: {
       city: "Астана",
       address: "Уточните адрес",
