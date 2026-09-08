@@ -1,8 +1,8 @@
 .userMenu {
   display: flex;
-  gap: toRem(32);
+  gap: toRem(40);
 
   @include laptop {
-    gap: toRem(8);
+    gap: toRem(16);
   }
 }

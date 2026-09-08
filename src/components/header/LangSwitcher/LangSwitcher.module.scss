@@ -13,15 +13,20 @@
   border-radius: toRem(80);
 
   @include tablet-above {
-  background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   input {
-    display: none;
+    @include visually-hidden;
 
     &:checked + label {
       color: var(--color-blue-grand);
       background-color: var(--color-light);
+    }
+
+    &:focus-visible + label {
+      outline: toRem(2) solid currentColor;
+      outline-offset: toRem(2);
     }
   }
 
