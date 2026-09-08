@@ -8,6 +8,9 @@ type DropdownMenuItem = {
   translationKey: keyof Locale["header"]["auth"];
 };
 
+type AuthDropdownProps = {
+  menuId: string;
+};
 const menuItems: DropdownMenuItem[] = [
   {
     id: "register",
@@ -36,11 +39,11 @@ const menuItems: DropdownMenuItem[] = [
   },
 ];
 
-export function AuthDropdown() {
+export function AuthDropdown({ menuId }: AuthDropdownProps) {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.menuItems}>
+    <div className={styles.menuItems} id={menuId || undefined}>
       <ul>
         {menuItems.map((item) => (
           <li key={item.id}>
