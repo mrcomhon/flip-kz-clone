@@ -21,6 +21,7 @@ const kk = {
     search: {
       placeholder: "FlipClone-дан іздеу: 1 000 000 тауар",
       title: "Іздеу",
+      clearButton: "Өрісті тазарту",
     },
 
     auth: {
@@ -76,6 +77,10 @@ const kk = {
     },
 
     copyright: "© 2007–2026 FlipClone.kz ЖШС",
+  },
+
+  product: {
+    notFound: "Ештеңе табылмады",
   },
 } satisfies Locale;
 

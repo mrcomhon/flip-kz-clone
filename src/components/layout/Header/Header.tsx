@@ -5,7 +5,13 @@ import { Location } from "@/components/header/Location";
 import styles from "./Header.module.scss";
 import { Container } from "../Container";
 
-export function Header() {
+export type HeaderProps = {
+  value: string;
+  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClear: () => void;
+};
+
+export function Header({ value, onSearchChange, onClear }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
@@ -13,7 +19,11 @@ export function Header() {
           <nav className={styles.navigation}>
             <LogoWrapper />
             <Location />
-            <SearchBar />
+            <SearchBar
+              value={value}
+              onSearchChange={onSearchChange}
+              onClear={onClear}
+            />
             <UserMenu />
           </nav>
         </Container>
@@ -25,7 +35,11 @@ export function Header() {
               <LogoWrapper />
               <UserMenu />
             </div>
-            <SearchBar />
+            <SearchBar
+              value={value}
+              onSearchChange={onSearchChange}
+              onClear={onClear}
+            />
           </nav>
         </Container>
         <Location className={styles.mobilePadding} />

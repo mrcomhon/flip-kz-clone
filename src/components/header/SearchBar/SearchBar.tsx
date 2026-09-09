@@ -1,20 +1,43 @@
 import { useTranslation } from "react-i18next";
 import SearchIcon from "@/assets/icons/search.svg?react";
 import styles from "./SearchBar.module.scss";
+import { ImCross } from "react-icons/im";
 
-export function SearchBar() {
+type SearchBarProps = {
+  value: string;
+  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClear: () => void;
+};
+
+export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
   const { t } = useTranslation();
 
   return (
     <div className={styles.searchBar}>
-      <form action="/search" name="search" className={styles.searchForm}>
+      <form
+        onSubmit={(event) => event.preventDefault()}
+        name="search"
+        className={styles.searchForm}
+      >
         <input
           className={styles.searchInput}
           type="search"
-          id="search"
           name="search"
           placeholder={t("header.search.placeholder")}
+          aria-label={t("header.search.placeholder")}
+          value={value}
+          onChange={onSearchChange}
         />
+        {value && (
+          <button
+            type="button"
+            className={styles.clearBtn}
+            aria-label={t("header.search.clearButton")}
+            onClick={onClear}
+          >
+            <ImCross />
+          </button>
+        )}
         <button
           className={styles.buttonSearch}
           title={t("header.search.title")}
