@@ -13,40 +13,51 @@ export function ProductCatalog({ searchQuery }: ProductCatalogProps) {
   const { t } = useTranslation();
   const normalizedQuery = searchQuery.toLowerCase().trim();
 
+  const filteredProductSections = productSections.filter((section) => {
+    return (
+      section.name.toLowerCase().includes(normalizedQuery) ||
+      section.items.some((item) => {
+        return item.name.toLowerCase().includes(normalizedQuery);
+      })
+    );
+  });
+
   return (
     <main>
       <Container>
-        {productSections.map((section, index) => {
-          const isLastSection = index === productSections.length - 1;
+        {filteredProductSections.length === 0 && (
+          <p className={styles.notFound}>{t("product.notFound")}</p>
+        )}
+        {filteredProductSections.map((section) => {
+          const isGridSection = section.key === "third";
 
-          const filteredProducts = section.items.filter((product) =>
-            product.name.toLowerCase().includes(normalizedQuery),
-          );
-
-          if (filteredProducts.length === 0) {
-            return <p>{t("product.notFound")}</p>;
-          } else {
+          const filteredProducts = section.items.filter((item) => {
             return (
-              <section className={styles.section} key={section.key}>
-                <h2 className={styles.title}>{section.name}</h2>
-                <ul
-                  role="list"
-                  className={clsx(
-                    styles.ul,
-                    isLastSection ? styles.ulGrid : styles.ulSlider,
-                  )}
-                >
-                  {filteredProducts.map((product) => {
-                    return (
-                      <li key={product.id}>
-                        <ProductCard product={product} />
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
+              section.name.toLowerCase().includes(normalizedQuery) ||
+              item.name.toLowerCase().includes(normalizedQuery)
             );
-          }
+          });
+
+          return (
+            <section className={styles.section} key={section.key}>
+              <h2 className={styles.title}>{section.name}</h2>
+              <ul
+                role="list"
+                className={clsx(
+                  styles.ul,
+                  isGridSection ? styles.ulGrid : styles.ulSlider,
+                )}
+              >
+                {filteredProducts.map((product) => {
+                  return (
+                    <li key={product.id}>
+                      <ProductCard product={product} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          );
         })}
       </Container>
     </main>
