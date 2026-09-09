@@ -32,3 +32,14 @@
 .ulGrid {
   grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
 }
+
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #111827; /* Темно-серый */
+  margin: fluid(60, 20);
+
+  @include fluid-text(64, 24)
+}
