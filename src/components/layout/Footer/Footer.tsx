@@ -104,6 +104,8 @@ const columns: FooterColumn[] = [
   },
 ];
 
+const allLinks = columns.flatMap((column) => column.links);
+
 const socials: FooterSocial[] = [
   {
     key: "telegram",
@@ -150,6 +152,33 @@ export function Footer() {
                 })}
               </ul>
             ))}
+
+            <ul className={styles.mobileList} role="list">
+              {allLinks.map((link) => (
+                <li key={link.key}>
+                  <a href={link.href}>{t(`footer.links.${link.label}`)}</a>
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.mobileApps}>
+              <a href="#">
+                <AppStore
+                  className={styles.appStore}
+                  aria-hidden="true"
+                  focusable="false"
+                />
+                <span>{t("footer.download.appStore")}</span>
+              </a>
+              <a href="#">
+                <GooglePlay
+                  className={styles.googlePlay}
+                  aria-hidden="true"
+                  focusable="false"
+                />
+                <span>{t("footer.download.googlePlay")}</span>
+              </a>
+            </div>
 
             <nav
               className={styles.soc1als}

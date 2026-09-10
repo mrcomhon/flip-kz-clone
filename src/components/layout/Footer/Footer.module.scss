@@ -5,6 +5,15 @@
   .footerFlex {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      gap: toRem(16);
+    }
+
+    @media (width <= toRem(800)) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   .limit {
@@ -28,9 +37,63 @@
   }
 
   .anchorList {
-    display: flex;
-    flex-direction: column;
-    gap: toRem(4);
+    display: none;
+
+    @include tablet-above {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(4);
+    }
+  }
+
+  .mobileList {
+    display: none;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: toRem(4) toRem(12);
+      flex: 1;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    @media (width <= toRem(800)) {
+      flex-basis: 100%;
+    }
+
+    @media (width <= toRem(450)) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .mobileApps {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(8);
+      width: toRem(176);
+      max-width: 100%;
+      flex-shrink: 0;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: toRem(8);
+      min-height: toRem(48);
+      padding: toRem(8) toRem(12);
+      border-radius: toRem(4);
+      background-color: var(--color-light);
+      font-size: toRem(14);
+      line-height: 1.3;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
   }
 
   .soc1als ul {
@@ -56,6 +119,7 @@
 
   .download {
     width: toRem(300);
+    max-width: 100%;
     padding: toRem(12);
     border-radius: toRem(4);
     gap: toRem(14);
@@ -64,6 +128,10 @@
     grid-template-columns: max-content 1fr;
     align-items: center;
     justify-content: center;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   .contentBlock {
