@@ -1,4 +1,4 @@
-import productSections from "./productData";
+import productSections from "../../data/productData";
 import { Container } from "../layout/Container";
 import { ProductCard } from "./ProductCard";
 import styles from "./ProductCatalog.module.scss";
