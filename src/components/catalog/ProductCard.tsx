@@ -1,4 +1,4 @@
-import type { ProductType } from "./productData";
+import type { ProductType } from "../../data/productData";
 import styles from "./ProductCard.module.scss";
 
 type ProductCardProps = {
