@@ -6,6 +6,7 @@ import { Badge } from "@/components/badge";
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [badges, setBadge] = useState<string[]>([]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -15,7 +16,13 @@ function HomePage() {
     setSearchQuery("");
   };
 
-  const [chooseBadge, setChooseBadge] = useState<string>("all")
+  const handleBadge = (currentBadge: string) => {
+    if (badges.includes(currentBadge)) {
+      setBadge(badges.filter((b) => b !== currentBadge));
+    } else {
+      setBadge([...badges, currentBadge]);
+    }
+  };
 
   return (
     <>
@@ -24,8 +31,10 @@ function HomePage() {
         onSearchChange={handleSearchChange}
         onClear={handleSearchClear}
       />
-      <Badge value={chooseBadge} onBadge={(key) => setChooseBadge(key)} />
-      <ProductCatalog searchQuery={searchQuery} />
+      <main>
+        <Badge value={badges} onBadge={handleBadge} />
+        <ProductCatalog searchQuery={searchQuery} />
+      </main>
       <Footer />
     </>
   );

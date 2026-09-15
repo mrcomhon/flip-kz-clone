@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Container } from "../layout/Container";
+import { Container } from "@/components/layout/Container";
 import styles from "./Badge.module.scss";
 
 type BadgeType = {
@@ -8,7 +8,7 @@ type BadgeType = {
 };
 
 type BadgeProps = {
-  value: string;
+  value: string[];
   onBadge: (key: string) => void;
 };
 
@@ -35,7 +35,7 @@ export function Badge({ value, onBadge }: BadgeProps) {
   return (
     <Container>
       {badges.map((badge) => {
-        const isActive = value === badge.key;
+        const isActive = value.includes(badge.key);
 
         return (
           <button

@@ -1,5 +1,5 @@
-import productSections from "../../data/productData";
-import { Container } from "../layout/Container";
+import productSections from "@/data/productData";
+import { Container } from "@/components/layout/Container";
 import { ProductCard } from "./ProductCard";
 import styles from "./ProductCatalog.module.scss";
 import clsx from "clsx";
@@ -13,53 +13,55 @@ export function ProductCatalog({ searchQuery }: ProductCatalogProps) {
   const { t } = useTranslation();
   const normalizedQuery = searchQuery.toLowerCase().trim();
 
-  const filteredProductSections = productSections.filter((section) => {
-    return (
-      section.name.toLowerCase().includes(normalizedQuery) ||
-      section.items.some((item) => {
-        return item.name.toLowerCase().includes(normalizedQuery);
-      })
-    );
-  });
+  const arr = productSections
+    .map((section) => {
+      const isSectionMatch = section.name
+        .toLowerCase()
+        .includes(normalizedQuery);
+
+      const filteredProducts = section.items.filter((item) => {
+        return (
+          isSectionMatch || item.name.toLowerCase().includes(normalizedQuery)
+        );
+      });
+
+      return {
+        name: section.name,
+        key: section.key,
+        items: filteredProducts,
+      };
+    })
+    .filter((section) => section.items.length > 0);
 
   return (
-    <main>
-      <Container>
-        {filteredProductSections.length === 0 && (
-          <p className={styles.notFound}>{t("product.notFound")}</p>
-        )}
-        {filteredProductSections.map((section) => {
-          const isGridSection = section.key === "third";
+    <Container>
+      {arr.length === 0 && (
+        <p className={styles.notFound}>{t("product.notFound")}</p>
+      )}
+      {arr.map((section) => {
+        const isGridSection = section.key === "extra";
 
-          const filteredProducts = section.items.filter((item) => {
-            return (
-              section.name.toLowerCase().includes(normalizedQuery) ||
-              item.name.toLowerCase().includes(normalizedQuery)
-            );
-          });
-
-          return (
-            <section className={styles.section} key={section.key}>
-              <h2 className={styles.title}>{section.name}</h2>
-              <ul
-                role="list"
-                className={clsx(
-                  styles.ul,
-                  isGridSection ? styles.ulGrid : styles.ulSlider,
-                )}
-              >
-                {filteredProducts.map((product) => {
-                  return (
-                    <li key={product.id}>
-                      <ProductCard product={product} />
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          );
-        })}
-      </Container>
-    </main>
+        return (
+          <section className={styles.section} key={section.key}>
+            <h2 className={styles.title}>{section.name}</h2>
+            <ul
+              role="list"
+              className={clsx(
+                styles.ul,
+                isGridSection ? styles.ulGrid : styles.ulSlider,
+              )}
+            >
+              {section.items.map((product) => {
+                return (
+                  <li key={product.id}>
+                    <ProductCard product={product} />
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })}
+    </Container>
   );
 }
