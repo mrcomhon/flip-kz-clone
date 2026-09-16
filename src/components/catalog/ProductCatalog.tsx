@@ -13,7 +13,7 @@ export function ProductCatalog({ searchQuery }: ProductCatalogProps) {
   const { t } = useTranslation();
   const normalizedQuery = searchQuery.toLowerCase().trim();
 
-  const arr = productSections
+  const filteredProductSections = productSections
     .map((section) => {
       const isSectionMatch = section.name
         .toLowerCase()
@@ -35,10 +35,10 @@ export function ProductCatalog({ searchQuery }: ProductCatalogProps) {
 
   return (
     <Container>
-      {arr.length === 0 && (
+      {filteredProductSections.length === 0 && (
         <p className={styles.notFound}>{t("product.notFound")}</p>
       )}
-      {arr.map((section) => {
+      {filteredProductSections.map((section) => {
         const isGridSection = section.key === "extra";
 
         return (
