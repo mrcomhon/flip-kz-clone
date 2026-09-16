@@ -35,7 +35,8 @@ export function Badge({ value, onBadge }: BadgeProps) {
   return (
     <Container>
       {badges.map((badge) => {
-        const isActive = value.includes(badge.key);
+        const isActive =
+          badge.key === "all" ? value.length === 0 : value.includes(badge.key);
 
         return (
           <button
