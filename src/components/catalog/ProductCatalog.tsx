@@ -7,13 +7,15 @@ import { useTranslation } from "react-i18next";
 
 type ProductCatalogProps = {
   searchQuery: string;
+  badges: string[];
 };
 
-export function ProductCatalog({ searchQuery }: ProductCatalogProps) {
+export function ProductCatalog({ searchQuery, badges }: ProductCatalogProps) {
   const { t } = useTranslation();
   const normalizedQuery = searchQuery.toLowerCase().trim();
 
   const filteredProductSections = productSections
+    .filter((section) => badges.length === 0 || badges.includes(section.key))
     .map((section) => {
       const isSectionMatch = section.name
         .toLowerCase()

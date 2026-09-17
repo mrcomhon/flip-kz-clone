@@ -3,6 +3,10 @@ import { Header } from "@/components/layout/Header";
 import { ProductCatalog } from "@/components/catalog";
 import { useState } from "react";
 import { Badge } from "@/components/badge";
+import productSections from "@/data/productData";
+
+const CATEGORY_COUNT = productSections.length
+
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -26,7 +30,7 @@ function HomePage() {
       setBadges(badges.filter((b) => b !== currentBadge));
     } else {
       const badgeArray = [...badges, currentBadge];
-      setBadges(badgeArray.length === 3 ? [] : badgeArray);
+      setBadges(badgeArray.length === CATEGORY_COUNT ? [] : badgeArray);
     }
   };
 
@@ -39,7 +43,7 @@ function HomePage() {
       />
       <main>
         <Badge value={badges} onBadge={handleBadge} />
-        <ProductCatalog searchQuery={searchQuery} />
+        <ProductCatalog searchQuery={searchQuery} badges={badges} />
       </main>
       <Footer />
     </>
