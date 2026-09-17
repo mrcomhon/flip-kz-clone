@@ -18,14 +18,15 @@ function HomePage() {
 
   const handleBadge = (currentBadge: string) => {
     if (currentBadge === "all") {
-      setBadges([])
-      return
+      setBadges([]);
+      return;
     }
 
     if (badges.includes(currentBadge)) {
       setBadges(badges.filter((b) => b !== currentBadge));
     } else {
-      setBadges([...badges, currentBadge]);
+      const badgeArray = [...badges, currentBadge];
+      setBadges(badgeArray.length === 3 ? [] : badgeArray);
     }
   };
 
