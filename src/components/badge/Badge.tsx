@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Container } from "@/components/layout/Container";
 import styles from "./Badge.module.scss";
+import productSections from "@/data/productData";
 
 type BadgeType = {
   label: string;
@@ -17,18 +18,10 @@ const badges: BadgeType[] = [
     label: "all",
     key: "all",
   },
-  {
-    label: "lego",
-    key: "lego",
-  },
-  {
-    label: "clothes",
-    key: "clothes",
-  },
-  {
-    label: "extra",
-    key: "extra",
-  },
+  ...productSections.map((section) => ({
+    label: section.name,
+    key: section.key,
+  })),
 ];
 
 export function Badge({ value, onBadge }: BadgeProps) {
