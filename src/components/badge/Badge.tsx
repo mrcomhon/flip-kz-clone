@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 import { Container } from "@/components/layout/Container";
 import styles from "./Badge.module.scss";
 import productSections from "@/data/productData";
@@ -25,23 +26,27 @@ const badges: BadgeType[] = [
 ];
 
 export function Badge({ value, onBadge }: BadgeProps) {
+  const { t } = useTranslation();
+
   return (
     <Container>
-      {badges.map((badge) => {
-        const isActive =
-          badge.key === "all" ? value.length === 0 : value.includes(badge.key);
+      <div className={styles.list}>
+        {badges.map((badge) => {
+          const isActive =
+            badge.key === "all" ? value.length === 0 : value.includes(badge.key);
 
-        return (
-          <button
-            key={badge.key}
-            className={clsx(styles.button, isActive && styles.isActive)}
-            onClick={() => onBadge(badge.key)}
-            type="button"
-          >
-            {badge.label}
-          </button>
-        );
-      })}
+          return (
+            <button
+              key={badge.key}
+              className={clsx(styles.button, isActive && styles.isActive)}
+              onClick={() => onBadge(badge.key)}
+              type="button"
+            >
+              {t(`badge.${badge.key}`, { defaultValue: badge.label })}
+            </button>
+          );
+        })}
+      </div>
     </Container>
   );
 }
