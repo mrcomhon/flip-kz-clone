@@ -6,16 +6,23 @@
 
 .item {
   display: flex;
+  min-width: 0;
   padding: toRem(8) toRem(16);
   gap: toRem(16);
   align-items: center;
   text-decoration: none;
   color: var(--color-black);
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 .item p {
   flex: 1;
+  min-width: 0;
   font-size: toRem(14);
+  overflow-wrap: anywhere;
 }
 
 .last {

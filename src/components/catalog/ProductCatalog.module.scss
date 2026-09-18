@@ -7,7 +7,7 @@
   color: var(--color-blue-deep);
   font-size: toRem(20);
   font-weight: 700;
-  line-height: toRem(24);
+  line-height: 1.3;
 }
 
 .ul {
@@ -24,22 +24,23 @@
 
 .ulSlider {
   grid-auto-flow: column;
-  grid-auto-columns: minmax(toRem(250), 1fr);
+  grid-auto-columns: minmax(min(100%, toRem(250)), 1fr);
   overflow-x: auto;
   scroll-behavior: smooth;
 }
 
 .ulGrid {
-  grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, toRem(250)), 1fr));
 }
 
 .notFound {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 500;
   color: #111827; /* Темно-серый */
-  margin: fluid(60, 20);
+  margin-block: fluid(60, 20);
+  margin-inline: 0;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
 
-  @include fluid-text(64, 24)
+  @include fluid-text(64, 24);
 }
