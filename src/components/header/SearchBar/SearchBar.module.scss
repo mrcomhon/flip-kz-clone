@@ -6,40 +6,49 @@
 
 .searchForm {
   display: flex;
-  position: relative;
+  border-radius: var(--border-radius-small);
+
+  &:focus-within {
+    outline: toRem(2) solid var(--color-yellow-brand);
+    outline-offset: toRem(2);
+  }
 }
 
 .searchInput {
   -webkit-appearance: none; /* Убирает системные стили Safari для поля поиска */
   appearance: none;
-  position: relative;
   flex-grow: 1;
   min-width: 0;
   max-width: toRem(1100);
   padding: toRem(4) toRem(16);
   border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
   border: none;
+  line-height: 1.4;
+
+  @include mobile {
+    padding-inline: toRem(8);
+  }
 
   &::placeholder {
     font-size: toRem(14);
-    line-height: toRem(20);
   }
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
+  &:focus-visible {
+    outline: toRem(2) solid var(--color-blue-deep);
+    outline-offset: toRem(-3);
   }
 }
 
 .clearBtn {
-  position: absolute;
-  right: toRem(54);
-  height: toRem(32);
+  @include flex-center;
+
+  flex-shrink: 0;
+  min-height: toRem(36);
   width: toRem(32);
-  top: 8%;
-  background: none;
+  background-color: var(--color-white);
   border: none;
-  font-size: 18px;
+  color: var(--color-black);
+  font-size: toRem(18);
   cursor: pointer;
   padding: toRem(6);
 }
@@ -51,13 +60,22 @@ input::-ms-clear {
 
 .buttonSearch {
   cursor: pointer;
+  flex-shrink: 0;
   width: toRem(50);
-  height: toRem(36);
+  min-height: toRem(36);
   background-color: var(--color-yellow-brand);
   border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
   border: none;
 
   @include flex-center();
+}
+
+.clearBtn,
+.buttonSearch {
+  &:focus-visible {
+    outline: toRem(2) solid var(--color-blue-deep);
+    outline-offset: toRem(-3);
+  }
 }
 
 .searchInput::-webkit-search-cancel-button {
