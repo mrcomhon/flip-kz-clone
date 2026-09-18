@@ -41,6 +41,7 @@ export function Badge({ value, onBadge }: BadgeProps) {
               className={clsx(styles.button, isActive && styles.isActive)}
               onClick={() => onBadge(badge.key)}
               type="button"
+              aria-pressed={isActive}
             >
               {t(`badge.${badge.key}`, { defaultValue: badge.label })}
             </button>
