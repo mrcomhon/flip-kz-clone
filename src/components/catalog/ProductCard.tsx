@@ -1,4 +1,4 @@
-import type { ProductType } from "./productData";
+import type { ProductType } from "@/data/productData";
 import styles from "./ProductCard.module.scss";
 
 type ProductCardProps = {
@@ -11,7 +11,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <img
         className={styles.image}
         src={product.image}
-        alt={product.name}
+        alt=""
         width={640}
         height={640}
         loading="lazy"

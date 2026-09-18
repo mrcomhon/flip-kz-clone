@@ -20,7 +20,7 @@ import wirelessHeadphones from "@/assets/products/wireless-headphones.webp";
 import yogaMat from "@/assets/products/yoga-mat.webp";
 
 type ProductSection = {
-  key: string;
+  key: "lego" | "clothes" | "extra";
   name: string;
   items: ProductType[];
 };
@@ -35,7 +35,7 @@ export type ProductType = {
 
 const productSections: ProductSection[] = [
   {
-    key: "first",
+    key: "lego",
     name: "Lego",
     items: [
       {
@@ -81,7 +81,7 @@ const productSections: ProductSection[] = [
     ],
   },
   {
-    key: "second",
+    key: "clothes",
     name: "Одежда",
     items: [
       {
@@ -122,7 +122,7 @@ const productSections: ProductSection[] = [
     ],
   },
   {
-    key: "third",
+    key: "extra",
     name: "Разное",
     items: [
       {
@@ -165,14 +165,16 @@ const productSections: ProductSection[] = [
         image: cordlessDrill,
         price: 650,
         name: "Аккумуляторная дрель-шуруповерт",
-        description: "Компактный инструмент с аккумулятором для домашних работ.",
+        description:
+          "Компактный инструмент с аккумулятором для домашних работ.",
       },
       {
         id: 21,
         image: airFryer,
         price: 900,
         name: "Аэрогриль",
-        description: "Компактный аэрогриль с механической регулировкой времени.",
+        description:
+          "Компактный аэрогриль с механической регулировкой времени.",
       },
       {
         id: 22,
@@ -186,14 +188,16 @@ const productSections: ProductSection[] = [
         image: yogaMat,
         price: 120,
         name: "Коврик для йоги",
-        description: "Нескользящий тренировочный коврик с ремнем для переноски.",
+        description:
+          "Нескользящий тренировочный коврик с ремнем для переноски.",
       },
       {
         id: 24,
         image: hardShellSuitcase,
         price: 700,
         name: "Чемодан на колесах",
-        description: "Прочный чемодан среднего размера с телескопической ручкой.",
+        description:
+          "Прочный чемодан среднего размера с телескопической ручкой.",
       },
     ],
   },

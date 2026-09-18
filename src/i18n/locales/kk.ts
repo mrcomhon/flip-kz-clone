@@ -79,6 +79,13 @@ const kk = {
     copyright: "© 2007–2026 FlipClone.kz ЖШС",
   },
 
+  badge: {
+    all: "Барлығы",
+    lego: "Lego",
+    clothes: "Киім",
+    extra: "Әртүрлі",
+  },
+
   product: {
     notFound: "Ештеңе табылмады",
   },
