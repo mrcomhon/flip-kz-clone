@@ -23,18 +23,19 @@
   margin-bottom: toRem(6);
   font-size: toRem(14);
   font-weight: 700;
-  line-height: toRem(18);
-  white-space: nowrap;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .name {
   display: -webkit-box;
-  min-height: toRem(32);
+  min-height: 2.8em;
   margin-bottom: toRem(6);
   overflow: hidden;
   font-size: toRem(13);
   font-weight: 500;
-  line-height: toRem(16);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -45,7 +46,8 @@
   overflow: hidden;
   color: #717171;
   font-size: toRem(12);
-  line-height: toRem(15);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;

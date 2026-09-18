@@ -17,7 +17,9 @@
   }
 
   @include tablet {
+    max-width: 100%;
     padding: toRem(4) toRem(4);
+    text-align: start;
   }
 }
 
@@ -39,16 +41,22 @@
 
 .mobileLocation {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
   gap: toRem(4);
 }
 
 .mobileAddress {
+  min-width: 0;
   text-decoration: none;
   color: var(--color-blue-grand);
+  overflow-wrap: anywhere;
 }
 
 .icon {
   @include tablet {
+    flex-shrink: 0;
     color: var(--color-yellow-brand);
   }
 }
