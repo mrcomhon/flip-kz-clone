@@ -5,8 +5,7 @@ import { useState } from "react";
 import { Badge } from "@/components/badge";
 import productSections from "@/data/productData";
 
-const CATEGORY_COUNT = productSections.length
-
+const CATEGORY_COUNT = productSections.length;
 
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
