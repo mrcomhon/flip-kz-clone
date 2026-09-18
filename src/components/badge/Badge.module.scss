@@ -1,0 +1,52 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: toRem(8);
+  padding-top: toRem(16);
+}
+
+.button {
+  @include flex-center(true);
+
+  min-width: 0;
+  max-width: 100%;
+  min-height: toRem(44);
+  padding: toRem(10) toRem(18);
+  border: toRem(1) solid transparent;
+  border-radius: toRem(999);
+  color: var(--color-blue-deep);
+  background-color: var(--color-gray-3);
+  font-size: toRem(14);
+  font-weight: 500;
+  line-height: toRem(20);
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    border-color: var(--color-blue-grand);
+    background-color: var(--color-light);
+  }
+
+  &:focus-visible {
+    outline: toRem(2) solid var(--color-blue-deep);
+    outline-offset: toRem(3);
+  }
+
+  &.isActive {
+    color: var(--color-white);
+    background-color: var(--color-blue-grand);
+
+    @include hover {
+      border-color: var(--color-blue-deep);
+      background-color: var(--color-blue-deep);
+    }
+  }
+
+  @include mobile {
+    padding-inline: toRem(14);
+  }
+}
