@@ -1,17 +1,17 @@
 import FavoriteIcon from "@/assets/icons/favorite.svg?react";
-import styles from "./Favorite.module.scss";
+import styles from "./FavoriteButton.module.scss";
 import { useTranslation } from "react-i18next";
 
-export function Favorite() {
+export function FavoriteButton() {
   const { t } = useTranslation();
 
   return (
-    <a
+    <button
+      type="button"
       className={styles.favorite}
-      href="#"
       aria-label={t("header.menu.favorites")}
     >
       <FavoriteIcon className={styles.icon} aria-hidden="true" />
-    </a>
+    </button>
   );
 }
