@@ -1,5 +1,6 @@
 import type { ProductType } from "@/data/productData";
 import styles from "./ProductCard.module.scss";
+import { FavoriteButton } from "@/components/favorites";
 
 type ProductCardProps = {
   product: ProductType;
@@ -16,6 +17,7 @@ export function ProductCard({ product }: ProductCardProps) {
         height={640}
         loading="lazy"
       />
+      <FavoriteButton />
       <p className={styles.price}>{product.price} ₸</p>
       <h3 className={styles.name}>{product.name}</h3>
       {product.description && (
