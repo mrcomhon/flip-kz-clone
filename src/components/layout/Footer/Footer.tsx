@@ -1,4 +1,4 @@
-import { Container } from "../Container";
+import { Container } from "@/components/layout/Container";
 import styles from "./Footer.module.scss";
 import QR from "@/assets/footer/qr-app.svg?react";
 import GooglePlay from "@/assets/footer/google-play.svg?react";
@@ -184,7 +184,7 @@ export function Footer() {
               className={styles.soc1als}
               aria-label={t("footer.socials.ariaLabel")}
             >
-              <ul className={styles.soc1alList} role="list">
+              <ul role="list">
                 {socials.map((social) => {
                   const Icon = social.src;
 

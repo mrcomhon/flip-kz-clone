@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import FocusLock from "react-focus-lock";
 import profileImg from "@/assets/png/profile.jpg";
 import { LangSwitcher } from "@/components/header/LangSwitcher";
@@ -47,7 +46,7 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
       document.body.style.overflow = previousBodyOverflow;
 
       if (document.body.getAttribute("style") === "") {
-        document.body.removeAttribute("style")
+        document.body.removeAttribute("style");
       }
     };
   }, []);
@@ -76,7 +75,7 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
           <a href="#" className={styles.auth}>
             <img
               src={profileImg}
-              className={clsx("img-circle")}
+              className="img-circle"
               alt=""
               width="64"
               height="64"

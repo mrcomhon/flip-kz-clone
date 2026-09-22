@@ -53,12 +53,10 @@ export function DesktopAuth({
         aria-expanded={isModalOpen}
         aria-controls={isModalOpen ? menuId : undefined}
       >
-        <div className="p500">{t("header.auth.login")}</div>
-        <div className="p300">{t("header.auth.mySection")}</div>
+        <span className="p500">{t("header.auth.login")}</span>
+        <span className="p300">{t("header.auth.mySection")}</span>
       </button>
-      {isModalOpen && (
-        <AuthDropdown menuId={menuId} />
-      )}
+      {isModalOpen && <AuthDropdown menuId={menuId} />}
     </div>
   );
 }

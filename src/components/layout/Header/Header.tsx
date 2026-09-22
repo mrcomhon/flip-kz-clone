@@ -3,7 +3,7 @@ import { SearchBar } from "@/components/header/SearchBar";
 import { UserMenu } from "@/components/header/UserMenu";
 import { Location } from "@/components/header/Location";
 import styles from "./Header.module.scss";
-import { Container } from "../Container";
+import { Container } from "@/components/layout/Container";
 
 export type HeaderProps = {
   value: string;

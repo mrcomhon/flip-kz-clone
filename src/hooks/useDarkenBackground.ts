@@ -11,7 +11,7 @@ export function useDarkenBackground(isOpen: boolean) {
     return () => {
       document.body.classList.remove("darken-bg");
       if (document.body.getAttribute("class") === "") {
-        document.body.removeAttribute("class")
+        document.body.removeAttribute("class");
       }
     };
   }, [isOpen]);

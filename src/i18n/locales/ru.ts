@@ -40,7 +40,7 @@ const ru = {
       catalog: "Каталог",
       discounts: "Скидки и акции",
       giftCards: "Подарочные карты",
-      city: "Алматы",
+      city: "Астана",
       cart: "Корзина",
       favorites: "Избранное",
       help: "Помощь",

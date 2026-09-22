@@ -10,7 +10,7 @@ type LangSwitcherProps = {
 export function LangSwitcher({ className }: LangSwitcherProps) {
   const kkId = useId();
   const ruId = useId();
-  const language = useId();
+  const languageGroupName = useId();
   const { i18n } = useTranslation();
 
   return (
@@ -18,7 +18,7 @@ export function LangSwitcher({ className }: LangSwitcherProps) {
       <div className={styles.langSwitcher}>
         <input
           id={kkId}
-          name={language}
+          name={languageGroupName}
           type="radio"
           onChange={() => i18n.changeLanguage("kk")}
           checked={i18n.resolvedLanguage === "kk"}
@@ -26,7 +26,7 @@ export function LangSwitcher({ className }: LangSwitcherProps) {
         <label htmlFor={kkId}>Қаз</label>
         <input
           id={ruId}
-          name={language}
+          name={languageGroupName}
           type="radio"
           onChange={() => i18n.changeLanguage("ru")}
           checked={i18n.resolvedLanguage === "ru"}
