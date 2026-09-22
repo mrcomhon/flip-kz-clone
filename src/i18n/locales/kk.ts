@@ -42,7 +42,7 @@ const kk = {
       catalog: "Каталог",
       discounts: "Жеңілдіктер мен акциялар",
       giftCards: "Сыйлық карталары",
-      city: "Алматы",
+      city: "Астана",
       cart: "Себет",
       favorites: "Таңдаулылар",
       help: "Көмек",

@@ -15,7 +15,7 @@ export function CloseButton({ onClose, ariaLabel }: CloseButtonProps) {
       aria-label={ariaLabel}
       className={clsx("reset-button", styles.closeButton)}
     >
-      <IoMdClose />
+      <IoMdClose aria-hidden="true" />
     </button>
   );
 }

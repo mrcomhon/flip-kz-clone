@@ -6,7 +6,11 @@ export function Logo() {
   const { t } = useTranslation();
 
   return (
-    <a href="/" title={t("header.logo.home")}>
+    <a
+      href="/"
+      title={t("header.logo.home")}
+      aria-label={t("header.logo.home")}
+    >
       <LogoIcon className={styles.logo} aria-hidden="true" />
     </a>
   );

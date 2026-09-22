@@ -35,15 +35,16 @@ export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
             aria-label={t("header.search.clearButton")}
             onClick={onClear}
           >
-            <ImCross />
+            <ImCross aria-hidden="true" />
           </button>
         )}
         <button
           className={styles.buttonSearch}
           title={t("header.search.title")}
+          aria-label={t("header.search.title")}
           type="submit"
         >
-          <SearchIcon />
+          <SearchIcon aria-hidden="true" />
         </button>
       </form>
     </div>

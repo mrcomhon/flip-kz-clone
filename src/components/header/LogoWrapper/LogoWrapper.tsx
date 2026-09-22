@@ -9,8 +9,8 @@ import { useTranslation } from "react-i18next";
 
 export function LogoWrapper() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const activeButton = () => setIsMenuOpen(true);
-  const closeButton = () => setIsMenuOpen(false);
+  const openMenu = () => setIsMenuOpen(true);
+  const closeMenu = () => setIsMenuOpen(false);
   const { t } = useTranslation();
 
   useDarkenBackground(isMenuOpen);
@@ -18,16 +18,17 @@ export function LogoWrapper() {
   return (
     <div className={styles.logoWrapper}>
       <button
+        type="button"
         className={clsx(styles.burgerButton, "visible-tablet", "reset-button")}
-        onClick={activeButton}
+        onClick={openMenu}
         aria-haspopup="dialog"
         aria-label={t("header.burgerMenu.burgerButton")}
       >
-        <Burger />
+        <Burger aria-hidden="true" />
       </button>
       <Logo />
 
-      {isMenuOpen && <BurgerMenu onClose={closeButton} />}
+      {isMenuOpen && <BurgerMenu onClose={closeMenu} />}
     </div>
   );
 }
