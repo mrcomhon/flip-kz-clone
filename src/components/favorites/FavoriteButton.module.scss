@@ -1,16 +1,63 @@
-.icon {
-  color: var(--color-light);
+.button {
+  --heart-fill: var(--color-white);
+  --heart-stroke: var(--color-black);
 
-  @include tablet {
-    width: toRem(28);
-    height: toRem(28);
+  position: absolute;
+  inset-block-start: toRem(8);
+  inset-inline-end: toRem(8);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: toRem(44);
+  height: toRem(44);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+
+  &:focus-visible {
+    outline: toRem(2) solid var(--color-blue-grand);
+    outline-offset: toRem(2);
+    background-color: var(--color-white);
+  }
+
+  @include hover(false) {
+    .icon {
+      transform: scale(1.08);
+    }
+  }
+
+  &:active .icon {
+    transform: scale(0.92);
   }
 }
 
-.button {
-  background-color: red;
+.icon {
+  display: block;
+  width: toRem(30);
+  height: toRem(30);
+  overflow: visible;
+  pointer-events: none;
+  transition: transform 0.15s ease;
+
+  [data-outline] {
+    fill: none;
+    stroke: var(--color-white);
+    stroke-width: 3;
+  }
+
+  [data-heart] {
+    fill: var(--heart-fill);
+    stroke: var(--heart-stroke);
+    stroke-width: 1.5;
+    transition-duration: 0.15s;
+  }
 }
 
 .isActive {
-  background-color: green;
+  --heart-fill: var(--color-red);
+  --heart-stroke: var(--color-red);
 }

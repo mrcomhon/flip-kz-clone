@@ -1,4 +1,4 @@
-import FavoriteIcon from "@/assets/icons/favorite.svg?react";
+import FavoriteIcon from "@/assets/icons/favorite-heart.svg?react";
 import styles from "./FavoriteButton.module.scss";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
@@ -22,7 +22,11 @@ export function FavoriteButton({
       onClick={onToggleFavorite}
       aria-pressed={isFavorite}
     >
-      <FavoriteIcon className={styles.icon} aria-hidden="true" />
+      <FavoriteIcon
+        className={styles.icon}
+        aria-hidden="true"
+        focusable="false"
+      />
     </button>
   );
 }
