@@ -10,6 +10,7 @@ const CATEGORY_COUNT = productSections.length;
 function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [badges, setBadges] = useState<string[]>([]);
+  const [favoriteIds, setFavoriteIds] = useState<number[]>([]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -33,6 +34,14 @@ function HomePage() {
     }
   };
 
+  const handleToggleFavorite = (productId: number) => {
+    if (favoriteIds.includes(productId)) {
+      setFavoriteIds(favoriteIds.filter((b) => b !== productId));
+    } else {
+      setFavoriteIds([...favoriteIds, productId]);
+    }
+  };
+
   return (
     <>
       <Header
@@ -42,7 +51,12 @@ function HomePage() {
       />
       <main>
         <Badge value={badges} onBadge={handleBadge} />
-        <ProductCatalog searchQuery={searchQuery} badges={badges} />
+        <ProductCatalog
+          searchQuery={searchQuery}
+          badges={badges}
+          onToggleFavorite={handleToggleFavorite}
+          favoriteIds={favoriteIds}
+        />
       </main>
       <Footer />
     </>

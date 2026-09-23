@@ -4,9 +4,17 @@ import { FavoriteButton } from "@/components/favorites";
 
 type ProductCardProps = {
   product: ProductType;
+  onToggleFavorite: (productId: number) => void;
+  favoriteIds: number[];
 };
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({
+  product,
+  onToggleFavorite,
+  favoriteIds,
+}: ProductCardProps) {
+  const isFavorite = favoriteIds.includes(product.id);
+
   return (
     <article className={styles.card}>
       <img
@@ -17,7 +25,10 @@ export function ProductCard({ product }: ProductCardProps) {
         height={640}
         loading="lazy"
       />
-      <FavoriteButton />
+      <FavoriteButton
+        onToggleFavorite={() => onToggleFavorite(product.id)}
+        isFavorite={isFavorite}
+      />
       <p className={styles.price}>{product.price} ₸</p>
       <h3 className={styles.name}>{product.name}</h3>
       {product.description && (
