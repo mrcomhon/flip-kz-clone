@@ -27,7 +27,7 @@ function HomePage() {
     }
 
     if (badges.includes(currentBadge)) {
-      setBadges(badges.filter((b) => b !== currentBadge));
+      setBadges(badges.filter((badge) => badge !== currentBadge));
     } else {
       const badgeArray = [...badges, currentBadge];
       setBadges(badgeArray.length === CATEGORY_COUNT ? [] : badgeArray);
@@ -36,9 +36,9 @@ function HomePage() {
 
   const handleToggleFavorite = (productId: number) => {
     if (favoriteIds.includes(productId)) {
-      setFavoriteIds(favoriteIds.filter((b) => b !== productId));
+      setFavoriteIds((prev) => prev.filter((fav) => fav !== productId));
     } else {
-      setFavoriteIds([...favoriteIds, productId]);
+      setFavoriteIds((prev) => [...prev, productId]);
     }
   };
 
