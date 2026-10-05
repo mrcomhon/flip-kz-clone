@@ -28,6 +28,7 @@ export function ProductCard({
       <FavoriteButton
         onToggleFavorite={() => onToggleFavorite(product.id)}
         isFavorite={isFavorite}
+        productName={product.name}
       />
       <p className={styles.price}>{product.price} ₸</p>
       <h3 className={styles.name}>{product.name}</h3>

@@ -6,11 +6,13 @@ import clsx from "clsx";
 type FavoriteButtonProps = {
   onToggleFavorite: () => void;
   isFavorite: boolean;
+  productName: string;
 };
 
 export function FavoriteButton({
   onToggleFavorite,
   isFavorite,
+  productName,
 }: FavoriteButtonProps) {
   const { t } = useTranslation();
 
@@ -18,7 +20,7 @@ export function FavoriteButton({
     <button
       type="button"
       className={clsx(styles.button, isFavorite && styles.isActive)}
-      aria-label={t("header.menu.favorites")}
+      aria-label={t("product.addToFavorites", { name: productName })}
       onClick={onToggleFavorite}
       aria-pressed={isFavorite}
     >

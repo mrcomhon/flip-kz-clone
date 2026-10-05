@@ -86,6 +86,7 @@ const ru = {
 
   product: {
     notFound: "Ничего не найдено",
+    addToFavorites: "Добавить в избранное: {{name}}",
   },
 };
 
