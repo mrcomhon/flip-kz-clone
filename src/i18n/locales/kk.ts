@@ -88,6 +88,7 @@ const kk = {
 
   product: {
     notFound: "Ештеңе табылмады",
+    addToFavorites: "Таңдаулыларға қосу: {{name}}",
   },
 } satisfies Locale;
 

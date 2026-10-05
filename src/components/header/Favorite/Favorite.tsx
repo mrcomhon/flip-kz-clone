@@ -1,4 +1,4 @@
-import FavoriteIcon from "@/assets/icons/favourite.svg?react";
+import FavoriteIcon from "@/assets/icons/favorite.svg?react";
 import styles from "./Favorite.module.scss";
 import { useTranslation } from "react-i18next";
 
