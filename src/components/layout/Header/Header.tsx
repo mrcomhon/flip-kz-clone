@@ -9,9 +9,15 @@ export type HeaderProps = {
   value: string;
   onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClear: () => void;
+  favoriteCount: number;
 };
 
-export function Header({ value, onSearchChange, onClear }: HeaderProps) {
+export function Header({
+  value,
+  onSearchChange,
+  onClear,
+  favoriteCount,
+}: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
@@ -24,7 +30,7 @@ export function Header({ value, onSearchChange, onClear }: HeaderProps) {
               onSearchChange={onSearchChange}
               onClear={onClear}
             />
-            <UserMenu />
+            <UserMenu favoriteCount={favoriteCount} />
           </nav>
         </Container>
       </div>
@@ -33,7 +39,7 @@ export function Header({ value, onSearchChange, onClear }: HeaderProps) {
           <nav className={styles.mobileNavigation}>
             <div className={styles.headerTop}>
               <LogoWrapper />
-              <UserMenu />
+              <UserMenu favoriteCount={favoriteCount} />
             </div>
             <SearchBar
               value={value}
