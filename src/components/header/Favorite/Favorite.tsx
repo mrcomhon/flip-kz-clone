@@ -2,7 +2,11 @@ import FavoriteIcon from "@/assets/icons/favorite.svg?react";
 import styles from "./Favorite.module.scss";
 import { useTranslation } from "react-i18next";
 
-export function Favorite() {
+type FavoriteProps = {
+  favoriteCount: number;
+};
+
+export function Favorite({ favoriteCount }: FavoriteProps) {
   const { t } = useTranslation();
 
   return (
@@ -12,6 +16,7 @@ export function Favorite() {
       aria-label={t("header.menu.favorites")}
     >
       <FavoriteIcon className={styles.icon} aria-hidden="true" />
+      <span>{favoriteCount}</span>
     </a>
   );
 }

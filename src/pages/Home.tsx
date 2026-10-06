@@ -42,12 +42,15 @@ function HomePage() {
     }
   };
 
+  const favoriteCount = favoriteIds.length;
+
   return (
     <>
       <Header
         value={searchQuery}
         onSearchChange={handleSearchChange}
         onClear={handleSearchClear}
+        favoriteCount={favoriteCount}
       />
       <main>
         <Badge value={badges} onBadge={handleBadge} />
