@@ -15,8 +15,12 @@ export function Favorite({ favoriteCount }: FavoriteProps) {
       href="#"
       aria-label={t("header.menu.favorites")}
     >
-      <FavoriteIcon className={styles.icon} aria-hidden="true" />
-      <span>{favoriteCount}</span>
+      <span className={styles.iconWrapper}>
+        <FavoriteIcon className={styles.icon} aria-hidden="true" />
+        {favoriteCount > 0 && (
+          <span className={styles.count}>{favoriteCount}</span>
+        )}
+      </span>
     </a>
   );
 }

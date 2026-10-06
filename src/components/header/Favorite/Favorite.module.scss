@@ -11,6 +11,11 @@
   }
 }
 
+.iconWrapper {
+  position: relative;
+  display: flex;
+}
+
 .icon {
   color: var(--color-light);
 
@@ -18,4 +23,22 @@
     width: toRem(28);
     height: toRem(28);
   }
+}
+
+.count {
+  position: absolute;
+  inset-block-start: toRem(-6);
+  inset-inline-start: calc(100% - #{toRem(12)});
+  display: grid;
+  place-items: center;
+  min-width: toRem(18);
+  height: toRem(18);
+  padding-inline: toRem(5);
+  border-radius: toRem(9);
+  background-color: var(--color-yellow-brand);
+  color: var(--color-black);
+  font-size: toRem(11);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
 }
