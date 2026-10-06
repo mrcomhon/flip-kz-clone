@@ -38,6 +38,10 @@ const kk = {
       cartNumber: "2 тауар",
     },
 
+    favorite: {
+      withCount: "Таңдаулылар: {{count}}",
+    },
+
     menu: {
       catalog: "Каталог",
       discounts: "Жеңілдіктер мен акциялар",

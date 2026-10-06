@@ -36,6 +36,10 @@ const ru = {
       cartNumber: "2 товара",
     },
 
+    favorite: {
+      withCount: "Избранное: {{count}}",
+    },
+
     menu: {
       catalog: "Каталог",
       discounts: "Скидки и акции",

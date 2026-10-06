@@ -8,17 +8,19 @@ type FavoriteProps = {
 
 export function Favorite({ favoriteCount }: FavoriteProps) {
   const { t } = useTranslation();
+  const label =
+    favoriteCount > 0
+      ? t("header.favorite.withCount", { count: favoriteCount })
+      : t("header.menu.favorites");
 
   return (
-    <a
-      className={styles.favorite}
-      href="#"
-      aria-label={t("header.menu.favorites")}
-    >
+    <a className={styles.favorite} href="#" aria-label={label}>
       <span className={styles.iconWrapper}>
         <FavoriteIcon className={styles.icon} aria-hidden="true" />
         {favoriteCount > 0 && (
-          <span className={styles.count}>{favoriteCount}</span>
+          <span className={styles.count} aria-hidden="true">
+            {favoriteCount}
+          </span>
         )}
       </span>
     </a>
