@@ -2,6 +2,10 @@
 
 Учебный frontend-клон части интерфейса [Flip.kz](https://www.flip.kz/). Проект создан для практики React, TypeScript, адаптивной вёрстки и компонентной архитектуры.
 
+**Демо:** [flip-kz-clone.vercel.app](https://flip-kz-clone.vercel.app/)
+
+![Главная страница FlipClone: шапка, фильтр категорий и карточки товаров](public/og-image.jpg)
+
 > [!IMPORTANT]
 > Проект находится в разработке. Сейчас это frontend-интерфейс без backend, API и полноценной логики интернет-магазина.
 
@@ -75,9 +79,14 @@ npm test
 | `npm run build`     | production-сборка                        |
 | `npm run preview`   | локальный просмотр сборки                |
 
+## Деплой
+
+Сайт развёрнут на [Vercel](https://vercel.com/). Каждый merge в `main` публикуется автоматически, для pull request создаётся отдельная ссылка для предпросмотра.
+
 ## Структура
 
 ```text
+public/           # иконки сайта и картинка для превью ссылки
 src/
 ├── assets/       # иконки, шрифты и изображения
 ├── components/   # React-компоненты
