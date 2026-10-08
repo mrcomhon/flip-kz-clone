@@ -10,6 +10,9 @@
     "strict": true,
     "noEmit": true,
     "isolatedModules": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "incremental": true,
 
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
@@ -20,7 +23,17 @@
       "@/*": ["./src/*"]
     },
 
-    "types": ["vite/client", "vite-plugin-svgr/client"]
+    "plugins": [{ "name": "next" }]
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "next-env.d.ts",
+    "./dist/types/**/*.ts",
+    "./dist/dev/types/**/*.ts",
+    "dist/types/**/*.ts",
+    "dist/dev/types/**/*.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
 }
