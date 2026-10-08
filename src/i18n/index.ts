@@ -14,7 +14,7 @@ export const resources = {
 i18n.use(initReactI18next).init({
   resources,
   defaultNS,
-  lng: document.documentElement.lang || "ru",
+  lng: "ru",
   fallbackLng: "ru",
   supportedLngs: ["kk", "ru"],
   interpolation: { escapeValue: false },
