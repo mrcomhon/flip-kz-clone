@@ -74,7 +74,7 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
           </div>
           <a href="#" className={styles.auth}>
             <img
-              src={profileImg}
+              src={profileImg.src}
               className="img-circle"
               alt=""
               width="64"

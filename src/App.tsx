@@ -1,4 +1,5 @@
-import HomePage from "./pages/Home";
+import "./i18n";
+import HomePage from "./views/Home";
 
 function App() {
   return <HomePage />;

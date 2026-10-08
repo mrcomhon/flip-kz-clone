@@ -40,7 +40,7 @@ const productSections: ProductSection[] = [
     items: [
       {
         id: 1,
-        image: brickFlowerBouquet,
+        image: brickFlowerBouquet.src,
         price: 950,
         name: "Lego Icons Цветочный букет",
         description:
@@ -48,7 +48,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 4,
-        image: brickSpaceFreighter,
+        image: brickSpaceFreighter.src,
         price: 1500,
         name: "Lego Star Wars Millennium Falcon",
         description:
@@ -56,7 +56,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 5,
-        image: brickSportsCar,
+        image: brickSportsCar.src,
         price: 850,
         name: "Lego Technic Porsche 911",
         description:
@@ -64,7 +64,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 6,
-        image: brickPoliceStation,
+        image: brickPoliceStation.src,
         price: 350,
         name: "Lego City Police Station",
         description:
@@ -72,7 +72,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 7,
-        image: brickWizardCastle,
+        image: brickWizardCastle.src,
         price: 600,
         name: "Lego Harry Potter Hogwarts Castle",
         description:
@@ -86,35 +86,35 @@ const productSections: ProductSection[] = [
     items: [
       {
         id: 2,
-        image: oversizedJacket,
+        image: oversizedJacket.src,
         price: 300,
         name: "Куртка оверсайз",
         description: "Удобная зимняя куртка с водоотталкивающим покрытием.",
       },
       {
         id: 8,
-        image: cottonHoodie,
+        image: cottonHoodie.src,
         price: 150,
         name: "Худи хлопковое",
         description: "Мягкое худи с начесом и карманом-кенгуру.",
       },
       {
         id: 9,
-        image: classicJeans,
+        image: classicJeans.src,
         price: 250,
         name: "Джинсы классические",
         description: "Прямые синие джинсы из плотного денима.",
       },
       {
         id: 10,
-        image: basicTshirt,
+        image: basicTshirt.src,
         price: 80,
         name: "Футболка базовая",
         description: "Однотонная футболка из 100% хлопка.",
       },
       {
         id: 11,
-        image: athleticJoggers,
+        image: athleticJoggers.src,
         price: 180,
         name: "Спортивные брюки",
         description: "Легкие джоггеры для тренировок и отдыха.",
@@ -127,42 +127,42 @@ const productSections: ProductSection[] = [
     items: [
       {
         id: 3,
-        image: wirelessHeadphones,
+        image: wirelessHeadphones.src,
         price: 500,
         name: "Беспроводные наушники",
         description: "Наушники с активным шумоподавлением и мощным басом.",
       },
       {
         id: 12,
-        image: smartWatch,
+        image: smartWatch.src,
         price: 1200,
         name: "Умные часы",
         description: "Фитнес-трекер с AMOLED экраном и датчиком пульса.",
       },
       {
         id: 13,
-        image: portableSpeaker,
+        image: portableSpeaker.src,
         price: 450,
         name: "Портативная колонка",
         description: "Влагозащищенная колонка с чистым звуком на 10 Вт.",
       },
       {
         id: 14,
-        image: powerBank,
+        image: powerBank.src,
         price: 250,
         name: "Внешний аккумулятор (Powerbank)",
         description: "Батарея на 20 000 мАч с поддержкой быстрой зарядки.",
       },
       {
         id: 15,
-        image: ledDeskLamp,
+        image: ledDeskLamp.src,
         price: 150,
         name: "Настольная LED лампа",
         description: "Стильная лампа с регулировкой яркости и цвета света.",
       },
       {
         id: 20,
-        image: cordlessDrill,
+        image: cordlessDrill.src,
         price: 650,
         name: "Аккумуляторная дрель-шуруповерт",
         description:
@@ -170,7 +170,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 21,
-        image: airFryer,
+        image: airFryer.src,
         price: 900,
         name: "Аэрогриль",
         description:
@@ -178,14 +178,14 @@ const productSections: ProductSection[] = [
       },
       {
         id: 22,
-        image: ceramicDinnerwareSet,
+        image: ceramicDinnerwareSet.src,
         price: 400,
         name: "Набор керамической посуды",
         description: "Комплект тарелок, мисок и кружек из матовой керамики.",
       },
       {
         id: 23,
-        image: yogaMat,
+        image: yogaMat.src,
         price: 120,
         name: "Коврик для йоги",
         description:
@@ -193,7 +193,7 @@ const productSections: ProductSection[] = [
       },
       {
         id: 24,
-        image: hardShellSuitcase,
+        image: hardShellSuitcase.src,
         price: 700,
         name: "Чемодан на колесах",
         description:
