@@ -1,3 +1,5 @@
+"use client";
+
 import "./i18n";
 import HomePage from "./views/Home";
 
