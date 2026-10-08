@@ -36,7 +36,7 @@
 
 - React 19;
 - TypeScript;
-- Vite;
+- Next.js 16 (App Router), пока в режиме статического экспорта;
 - SCSS Modules;
 - i18next и react-i18next;
 - ESLint;
@@ -58,7 +58,7 @@ npm install
 npm run dev
 ```
 
-После запуска Vite выведет локальный URL в терминале.
+После запуска сайт доступен по адресу `http://localhost:3000`.
 
 ## Проверки
 
@@ -72,12 +72,12 @@ npm test
 
 | Команда             | Назначение                              |
 | ------------------- | --------------------------------------- |
-| `npm run dev`       | запуск dev-сервера Vite                  |
+| `npm run dev`       | запуск dev-сервера Next.js               |
 | `npm test`          | lint, проверка типов и сборка            |
-| `npm run typecheck` | проверка типов TypeScript                |
+| `npm run typecheck` | генерация типов Next.js и проверка типов |
 | `npm run lint`      | проверка кода ESLint                     |
-| `npm run build`     | production-сборка                        |
-| `npm run preview`   | локальный просмотр сборки                |
+| `npm run build`     | production-сборка в папку `dist`         |
+| `npm run preview`   | локальный просмотр сборки из `dist`      |
 
 ## Деплой
 
@@ -88,14 +88,15 @@ npm test
 ```text
 public/           # иконки сайта и картинка для превью ссылки
 src/
+├── app/          # точка входа Next.js: общий layout и страницы
 ├── assets/       # иконки, шрифты и изображения
 ├── components/   # React-компоненты
 ├── data/         # локальные данные каталога и категорий
 ├── hooks/        # пользовательские React-хуки
 ├── i18n/         # настройка переводов и локали ru/kk
-├── pages/        # страницы
 ├── styles/       # глобальные стили и SCSS-хелперы
-└── types/        # общие объявления типов
+├── types/        # общие объявления типов
+└── views/        # содержимое страниц
 ```
 
 ## План развития
