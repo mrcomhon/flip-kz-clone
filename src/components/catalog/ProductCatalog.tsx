@@ -8,16 +8,9 @@ import { useTranslation } from "react-i18next";
 type ProductCatalogProps = {
   searchQuery: string;
   badges: string[];
-  onToggleFavorite: (productId: number) => void;
-  favoriteIds: number[];
 };
 
-export function ProductCatalog({
-  searchQuery,
-  badges,
-  onToggleFavorite,
-  favoriteIds,
-}: ProductCatalogProps) {
+export function ProductCatalog({ searchQuery, badges }: ProductCatalogProps) {
   const { t } = useTranslation();
   const normalizedQuery = searchQuery.toLowerCase().trim();
 
@@ -63,11 +56,7 @@ export function ProductCatalog({
               {section.items.map((product) => {
                 return (
                   <li key={product.id}>
-                    <ProductCard
-                      product={product}
-                      onToggleFavorite={onToggleFavorite}
-                      favoriteIds={favoriteIds}
-                    />
+                    <ProductCard product={product} />
                   </li>
                 );
               })}

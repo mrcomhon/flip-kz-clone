@@ -1,13 +1,12 @@
 import FavoriteIcon from "@/assets/icons/favorite.svg?react";
 import styles from "./Favorite.module.scss";
 import { useTranslation } from "react-i18next";
+import { useAppSelector } from "@/store/hooks";
 
-type FavoriteProps = {
-  favoriteCount: number;
-};
-
-export function Favorite({ favoriteCount }: FavoriteProps) {
+export function Favorite() {
   const { t } = useTranslation();
+  const favoriteCount = useAppSelector((state) => state.favorites.value.length);
+
   const label =
     favoriteCount > 0
       ? t("header.favorite.withCount", { count: favoriteCount })
