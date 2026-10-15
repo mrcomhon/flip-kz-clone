@@ -15,6 +15,7 @@ next-env.d.ts
 *.tsbuildinfo
 *.local
 Plan.txt
+Чек-лист фронтенд.md
 
 # Editor directories and files
 .vscode/*

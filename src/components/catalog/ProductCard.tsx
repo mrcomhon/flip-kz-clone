@@ -1,18 +1,16 @@
 import type { ProductType } from "@/data/productData";
 import styles from "./ProductCard.module.scss";
 import { FavoriteButton } from "@/components/favorites";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { toggleFavorite } from "@/store/favoritesSlice";
 
 type ProductCardProps = {
   product: ProductType;
-  onToggleFavorite: (productId: number) => void;
-  favoriteIds: number[];
 };
 
-export function ProductCard({
-  product,
-  onToggleFavorite,
-  favoriteIds,
-}: ProductCardProps) {
+export function ProductCard({ product }: ProductCardProps) {
+  const favoriteIds = useAppSelector((state) => state.favorites.value);
+  const dispatch = useAppDispatch();
   const isFavorite = favoriteIds.includes(product.id);
 
   return (
@@ -26,7 +24,7 @@ export function ProductCard({
         loading="lazy"
       />
       <FavoriteButton
-        onToggleFavorite={() => onToggleFavorite(product.id)}
+        onToggleFavorite={() => dispatch(toggleFavorite(product.id))}
         isFavorite={isFavorite}
         productName={product.name}
       />

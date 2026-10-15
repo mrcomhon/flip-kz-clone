@@ -4,16 +4,12 @@ import { Favorite } from "@/components/header/Favorite";
 import { LangSwitcher } from "@/components/header/LangSwitcher";
 import styles from "./UserMenu.module.scss";
 
-type UserMenuProps = {
-  favoriteCount: number;
-};
-
-export function UserMenu({ favoriteCount }: UserMenuProps) {
+export function UserMenu() {
   return (
     <div className={styles.userMenu}>
       <Auth />
       <LangSwitcher className="hidden-tablet" />
-      <Favorite favoriteCount={favoriteCount} />
+      <Favorite />
       <Cart />
     </div>
   );
