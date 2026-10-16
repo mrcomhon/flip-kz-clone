@@ -4,6 +4,8 @@ import "../styles/normalize.scss";
 import "../styles/fonts.scss";
 import "../styles/utils.scss";
 import { Providers } from "./providers";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
 
 const title = "FlipClone — учебный клон интерфейса Flip.kz";
 
@@ -45,7 +47,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

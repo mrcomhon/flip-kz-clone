@@ -1,5 +1,3 @@
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
 import { ProductCatalog } from "@/components/catalog";
 import { useState } from "react";
 import { Badge } from "@/components/badge";
@@ -25,14 +23,10 @@ function HomePage() {
   };
 
   return (
-    <>
-      <Header />
-      <main>
-        <Badge value={badges} onBadge={handleBadge} />
-        <ProductCatalog searchQuery="" badges={badges} />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Badge value={badges} onBadge={handleBadge} />
+      <ProductCatalog searchQuery="" badges={badges} />
+    </main>
   );
 }
 
