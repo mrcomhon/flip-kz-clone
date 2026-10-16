@@ -1,3 +1,5 @@
+"use client";
+
 import { LogoWrapper } from "@/components/header/LogoWrapper";
 import { SearchBar } from "@/components/header/SearchBar";
 import { UserMenu } from "@/components/header/UserMenu";
@@ -5,13 +7,7 @@ import { Location } from "@/components/header/Location";
 import styles from "./Header.module.scss";
 import { Container } from "@/components/layout/Container";
 
-export type HeaderProps = {
-  value: string;
-  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClear: () => void;
-};
-
-export function Header({ value, onSearchChange, onClear }: HeaderProps) {
+export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
@@ -19,11 +15,7 @@ export function Header({ value, onSearchChange, onClear }: HeaderProps) {
           <nav className={styles.navigation}>
             <LogoWrapper />
             <Location />
-            <SearchBar
-              value={value}
-              onSearchChange={onSearchChange}
-              onClear={onClear}
-            />
+            <SearchBar />
             <UserMenu />
           </nav>
         </Container>
@@ -35,11 +27,7 @@ export function Header({ value, onSearchChange, onClear }: HeaderProps) {
               <LogoWrapper />
               <UserMenu />
             </div>
-            <SearchBar
-              value={value}
-              onSearchChange={onSearchChange}
-              onClear={onClear}
-            />
+            <SearchBar />
           </nav>
         </Container>
         <Location className={styles.mobilePadding} />

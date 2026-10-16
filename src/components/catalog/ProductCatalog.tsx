@@ -1,3 +1,5 @@
+"use client";
+
 import productSections from "@/data/productData";
 import { Container } from "@/components/layout/Container";
 import { ProductCard } from "./ProductCard";

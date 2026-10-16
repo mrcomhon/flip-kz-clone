@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@/components/layout/Container";
 import styles from "./Footer.module.scss";
 import QR from "@/assets/footer/qr-app.svg?react";

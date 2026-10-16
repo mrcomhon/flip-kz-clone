@@ -2,23 +2,24 @@ import { useTranslation } from "react-i18next";
 import SearchIcon from "@/assets/icons/search.svg?react";
 import styles from "./SearchBar.module.scss";
 import { ImCross } from "react-icons/im";
+import { useState } from "react";
+import Form from "next/form";
 
-type SearchBarProps = {
-  value: string;
-  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClear: () => void;
-};
-
-export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
+export function SearchBar() {
   const { t } = useTranslation();
+  const [value, setValue] = useState("");
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
+
+  const onClear = () => {
+    setValue("");
+  };
 
   return (
     <div className={styles.searchBar}>
-      <form
-        onSubmit={(event) => event.preventDefault()}
-        name="search"
-        className={styles.searchForm}
-      >
+      <Form action="/search" name="search" className={styles.searchForm}>
         <input
           className={styles.searchInput}
           type="search"
@@ -26,7 +27,7 @@ export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
           placeholder={t("header.search.placeholder")}
           aria-label={t("header.search.placeholder")}
           value={value}
-          onChange={onSearchChange}
+          onChange={handleChange}
         />
         {value && (
           <button
@@ -46,7 +47,7 @@ export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
         >
           <SearchIcon aria-hidden="true" />
         </button>
-      </form>
+      </Form>
     </div>
   );
 }
