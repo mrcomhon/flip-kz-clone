@@ -92,6 +92,10 @@ const ru = {
     notFound: "Ничего не найдено",
     addToFavorites: "Добавить в избранное: {{name}}",
   },
+
+  searchPage: {
+    title: 'Результаты поиска по запросу: "{{query}}"',
+  },
 };
 
 export type Locale = typeof ru;

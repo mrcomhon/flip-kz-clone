@@ -94,6 +94,10 @@ const kk = {
     notFound: "Ештеңе табылмады",
     addToFavorites: "Таңдаулыларға қосу: {{name}}",
   },
+
+  searchPage: {
+    title: '"{{query}}" сұрауы бойынша іздеу нәтижелері',
+  },
 } satisfies Locale;
 
 export default kk;
