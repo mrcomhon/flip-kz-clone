@@ -1,4 +1,5 @@
 import { ProductCatalog } from "@/components/catalog";
+import { SearchTitle } from "@/components/search/SearchTitle";
 
 export default async function SearchPage({
   searchParams,
@@ -8,7 +9,7 @@ export default async function SearchPage({
 
   return (
     <main>
-      <h1>Результаты поиска по запросу: "{query}"</h1>
+      <SearchTitle query={query} />
       <ProductCatalog searchQuery={query} badges={[]} />
     </main>
   );
