@@ -3,6 +3,7 @@ import SearchIcon from "@/assets/icons/search.svg?react";
 import styles from "./SearchBar.module.scss";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
+import Form from "next/form";
 
 export function SearchBar() {
   const { t } = useTranslation();
@@ -18,11 +19,7 @@ export function SearchBar() {
 
   return (
     <div className={styles.searchBar}>
-      <form
-        onSubmit={(event) => event.preventDefault()}
-        name="search"
-        className={styles.searchForm}
-      >
+      <Form action="/search" name="search" className={styles.searchForm}>
         <input
           className={styles.searchInput}
           type="search"
@@ -50,7 +47,7 @@ export function SearchBar() {
         >
           <SearchIcon aria-hidden="true" />
         </button>
-      </form>
+      </Form>
     </div>
   );
 }
