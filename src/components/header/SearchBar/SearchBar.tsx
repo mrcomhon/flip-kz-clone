@@ -2,15 +2,19 @@ import { useTranslation } from "react-i18next";
 import SearchIcon from "@/assets/icons/search.svg?react";
 import styles from "./SearchBar.module.scss";
 import { ImCross } from "react-icons/im";
+import { useState } from "react";
 
-type SearchBarProps = {
-  value: string;
-  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onClear: () => void;
-};
-
-export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
+export function SearchBar() {
   const { t } = useTranslation();
+  const [value, setValue] = useState("");
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
+
+  const onClear = () => {
+    setValue("");
+  };
 
   return (
     <div className={styles.searchBar}>
@@ -26,7 +30,7 @@ export function SearchBar({ value, onSearchChange, onClear }: SearchBarProps) {
           placeholder={t("header.search.placeholder")}
           aria-label={t("header.search.placeholder")}
           value={value}
-          onChange={onSearchChange}
+          onChange={handleChange}
         />
         {value && (
           <button
