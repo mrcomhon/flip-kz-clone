@@ -2,6 +2,7 @@ import FavoriteIcon from "@/assets/icons/favorite.svg?react";
 import styles from "./Favorite.module.scss";
 import { useTranslation } from "react-i18next";
 import { useAppSelector } from "@/store/hooks";
+import Link from "next/link";
 
 export function Favorite() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export function Favorite() {
       : t("header.menu.favorites");
 
   return (
-    <a className={styles.favorite} href="#" aria-label={label}>
+    <Link className={styles.favorite} href="/favorites" aria-label={label}>
       <span className={styles.iconWrapper}>
         <FavoriteIcon className={styles.icon} aria-hidden="true" />
         {favoriteCount > 0 && (
@@ -22,6 +23,6 @@ export function Favorite() {
           </span>
         )}
       </span>
-    </a>
+    </Link>
   );
 }
