@@ -98,6 +98,10 @@ const kk = {
   searchPage: {
     title: '"{{query}}" сұрауы бойынша іздеу нәтижелері',
   },
+
+  favoritesPage: {
+    empty: "Таңдаулыларда әзірге ештеңе жоқ",
+  },
 } satisfies Locale;
 
 export default kk;

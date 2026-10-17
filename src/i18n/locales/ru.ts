@@ -96,6 +96,10 @@ const ru = {
   searchPage: {
     title: 'Результаты поиска по запросу: "{{query}}"',
   },
+
+  favoritesPage: {
+    empty: "В избранном пока ничего нет",
+  },
 };
 
 export type Locale = typeof ru;
