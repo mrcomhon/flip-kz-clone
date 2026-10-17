@@ -10,3 +10,14 @@
     min-width: 0;
   }
 }
+
+.empty {
+  margin-block: fluid(60, 20);
+  color: var(--color-black);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+
+  @include fluid-text(64, 24);
+}

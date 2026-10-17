@@ -19,7 +19,7 @@ export function FavoritesList() {
   return (
     <Container>
       {favoriteProducts.length === 0 ? (
-        <p>{t("favoritesPage.empty")}</p>
+        <p className={styles.empty}>{t("favoritesPage.empty")}</p>
       ) : (
         <ul role="list" className={styles.list}>
           {favoriteProducts.map((product) => {
