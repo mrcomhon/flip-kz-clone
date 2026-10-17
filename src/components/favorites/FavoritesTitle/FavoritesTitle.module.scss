@@ -1,0 +1,9 @@
+.title {
+  padding-top: toRem(20);
+  color: var(--color-black);
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+
+  @include fluid-text(28, 20);
+}
