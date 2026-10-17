@@ -1,0 +1,23 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, toRem(250)), 1fr));
+  gap: toRem(10);
+  margin: 0;
+  padding: toRem(20) 0;
+  list-style: none;
+
+  & > li {
+    min-width: 0;
+  }
+}
+
+.empty {
+  margin-block: fluid(60, 20);
+  color: var(--color-black);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+
+  @include fluid-text(64, 24);
+}
