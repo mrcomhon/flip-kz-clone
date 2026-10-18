@@ -9,6 +9,7 @@ import { BiLogoTelegram } from "react-icons/bi";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import type { Locale } from "@/i18n/locales/ru";
+import Link from "next/link";
 
 type MenuListItem = {
   id: string;
@@ -55,7 +56,7 @@ const menuItems: MenuListItem[] = [
   },
   {
     id: "favorite",
-    href: "#",
+    href: "/favorites",
     hasDivider: true,
     icon: <IoMdHeart />,
     translationKey: "favorites",
@@ -88,12 +89,12 @@ export function MenuList() {
     <ul className={styles.list}>
       {menuItems.map((item) => (
         <li key={item.id} className={clsx(item.hasDivider && styles.last)}>
-          <a href={item.href} className={styles.item}>
+          <Link href={item.href} className={styles.item}>
             {item.icon}
             <p className={clsx(item.isLocation && styles.city)}>
               {t(`header.menu.${item.translationKey}`)}
             </p>
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
