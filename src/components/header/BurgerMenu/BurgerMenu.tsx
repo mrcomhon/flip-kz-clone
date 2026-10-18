@@ -83,7 +83,7 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
             />
             <strong>{t("header.auth.loginOrRegister")}</strong>
           </a>
-          <MenuList />
+          <MenuList onClose={onClose} />
         </div>
       </FocusLock>
     </div>

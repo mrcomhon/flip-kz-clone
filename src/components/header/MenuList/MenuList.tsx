@@ -82,11 +82,15 @@ const menuItems: MenuListItem[] = [
   },
 ];
 
-export function MenuList() {
+type MenuListProps = {
+  onClose: () => void;
+};
+
+export function MenuList({ onClose }: MenuListProps) {
   const { t } = useTranslation();
 
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} onClick={onClose}>
       {menuItems.map((item) => (
         <li key={item.id} className={clsx(item.hasDivider && styles.last)}>
           <Link href={item.href} className={styles.item}>
