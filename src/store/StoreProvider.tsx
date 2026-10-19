@@ -9,11 +9,12 @@ type StoreProviderProps = {
   children: ReactNode;
 };
 
+const FAVORITES_KEY = "favorites";
 export function StoreProvider({ children }: StoreProviderProps) {
   const [store] = useState(makeStore);
 
   useEffect(() => {
-    const savedFavorites = localStorage.getItem("favorites");
+    const savedFavorites = localStorage.getItem(FAVORITES_KEY);
 
     if (savedFavorites) {
       try {
@@ -30,14 +31,14 @@ export function StoreProvider({ children }: StoreProviderProps) {
 
       try {
         const stringified = JSON.stringify(result.favorites.value);
-        localStorage.setItem("favorites", stringified);
+        localStorage.setItem(FAVORITES_KEY, stringified);
       } catch (error) {
         console.log("Ошибка записи в localStorage", error);
       }
     });
 
     return sub;
-  });
+  }, [store]);
 
   return <Provider store={store}>{children}</Provider>;
 }
