@@ -22,7 +22,6 @@ export function StoreProvider({ children }: StoreProviderProps) {
         store.dispatch(hydrateFavorites(parsed));
       } catch (error) {
         console.log("Ошибка парсинга localStorage", error);
-        return undefined;
       }
     }
 
