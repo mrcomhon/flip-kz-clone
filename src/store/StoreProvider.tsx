@@ -20,7 +20,11 @@ export function StoreProvider({ children }: StoreProviderProps) {
       if (savedFavorites) {
         try {
           const parsed = JSON.parse(savedFavorites);
-          store.dispatch(hydrateFavorites(parsed));
+          if (Array.isArray(parsed)) {
+            store.dispatch(hydrateFavorites(parsed));
+          } else {
+            console.log("В localStorage не массив", parsed);
+          }
         } catch (error) {
           console.log("Ошибка парсинга localStorage", error);
         }
