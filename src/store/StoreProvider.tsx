@@ -14,15 +14,19 @@ export function StoreProvider({ children }: StoreProviderProps) {
   const [store] = useState(makeStore);
 
   useEffect(() => {
-    const savedFavorites = localStorage.getItem(FAVORITES_KEY);
+    try {
+      const savedFavorites = localStorage.getItem(FAVORITES_KEY);
 
-    if (savedFavorites) {
-      try {
-        const parsed = JSON.parse(savedFavorites);
-        store.dispatch(hydrateFavorites(parsed));
-      } catch (error) {
-        console.log("Ошибка парсинга localStorage", error);
+      if (savedFavorites) {
+        try {
+          const parsed = JSON.parse(savedFavorites);
+          store.dispatch(hydrateFavorites(parsed));
+        } catch (error) {
+          console.log("Ошибка парсинга localStorage", error);
+        }
       }
+    } catch (error) {
+      console.log(error);
     }
 
     const sub = store.subscribe(() => {
