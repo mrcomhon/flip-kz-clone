@@ -4,6 +4,7 @@
   width: toRem(220);
   left: 0;
   top: 100%;
+  z-index: 10;
   border-radius: var(--border-radius-small);
   background-color: var(--color-white);
 }
