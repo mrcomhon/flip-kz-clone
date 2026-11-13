@@ -1,11 +1,11 @@
 "use client";
 
-import productSections from "@/data/productData";
 import { Container } from "@/components/layout/Container";
 import { ProductCard } from "./ProductCard";
 import styles from "./ProductCatalog.module.scss";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
+import { filterProducts } from "@/components/catalog/filterProducts";
 
 type ProductCatalogProps = {
   searchQuery: string;
@@ -14,28 +14,8 @@ type ProductCatalogProps = {
 
 export function ProductCatalog({ searchQuery, badges }: ProductCatalogProps) {
   const { t } = useTranslation();
-  const normalizedQuery = searchQuery.toLowerCase().trim();
 
-  const filteredProductSections = productSections
-    .filter((section) => badges.length === 0 || badges.includes(section.key))
-    .map((section) => {
-      const isSectionMatch = section.name
-        .toLowerCase()
-        .includes(normalizedQuery);
-
-      const filteredProducts = section.items.filter((item) => {
-        return (
-          isSectionMatch || item.name.toLowerCase().includes(normalizedQuery)
-        );
-      });
-
-      return {
-        name: section.name,
-        key: section.key,
-        items: filteredProducts,
-      };
-    })
-    .filter((section) => section.items.length > 0);
+  const filteredProductSections = filterProducts(searchQuery, badges);
 
   return (
     <Container>
