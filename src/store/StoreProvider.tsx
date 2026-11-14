@@ -4,6 +4,7 @@ import { ReactNode, useState, useEffect } from "react";
 import { Provider } from "react-redux";
 import { makeStore } from "@/store/store";
 import { hydrateFavorites } from "@/store/favoritesSlice";
+import { parseFavorites } from "@/store/parseFavorites";
 
 type StoreProviderProps = {
   children: ReactNode;
@@ -18,16 +19,8 @@ export function StoreProvider({ children }: StoreProviderProps) {
       const savedFavorites = localStorage.getItem(FAVORITES_KEY);
 
       if (savedFavorites) {
-        try {
-          const parsed = JSON.parse(savedFavorites);
-          if (Array.isArray(parsed)) {
-            store.dispatch(hydrateFavorites(parsed));
-          } else {
-            console.log("В localStorage не массив", parsed);
-          }
-        } catch (error) {
-          console.log("Ошибка парсинга localStorage", error);
-        }
+        const result = parseFavorites(savedFavorites);
+        store.dispatch(hydrateFavorites(result));
       }
     } catch (error) {
       console.log(error);

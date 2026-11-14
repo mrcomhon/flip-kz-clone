@@ -8,7 +8,8 @@
     "build": "next build",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "npm run lint && npm run typecheck && npm run build",
+    "test:unit": "vitest run --passWithNoTests",
+    "test": "npm run lint && npm run typecheck && npm run test:unit && npm run build",
     "start": "next start"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
     "globals": "^17.5.0",
     "sass": "^1.100.0",
     "typescript": "~6.0.0",
-    "typescript-eslint": "^8.68.0"
+    "typescript-eslint": "^8.68.0",
+    "vitest": "^5.1.0"
   }
 }
