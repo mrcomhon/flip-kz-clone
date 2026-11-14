@@ -1,11 +1,12 @@
 "use client";
 
 import { LogoWrapper } from "@/components/header/LogoWrapper";
-import { SearchBar } from "@/components/header/SearchBar";
+import { SearchBar, SearchBarFromUrl } from "@/components/header/SearchBar";
 import { UserMenu } from "@/components/header/UserMenu";
 import { Location } from "@/components/header/Location";
 import styles from "./Header.module.scss";
 import { Container } from "@/components/layout/Container";
+import { Suspense } from "react";
 
 export function Header() {
   return (
@@ -15,7 +16,9 @@ export function Header() {
           <nav className={styles.navigation}>
             <LogoWrapper />
             <Location />
-            <SearchBar />
+            <Suspense fallback={<SearchBar initialValue="" />}>
+              <SearchBarFromUrl />
+            </Suspense>
             <UserMenu />
           </nav>
         </Container>
@@ -27,7 +30,9 @@ export function Header() {
               <LogoWrapper />
               <UserMenu />
             </div>
-            <SearchBar />
+            <Suspense fallback={<SearchBar initialValue="" />}>
+              <SearchBarFromUrl />
+            </Suspense>
           </nav>
         </Container>
         <Location className={styles.mobilePadding} />
