@@ -21,6 +21,8 @@ export function StoreProvider({ children }: StoreProviderProps) {
       if (savedFavorites) {
         const result = parseFavorites(savedFavorites);
         store.dispatch(hydrateFavorites(result));
+      } else {
+        store.dispatch(hydrateFavorites([]));
       }
     } catch (error) {
       console.log(error);
