@@ -4,10 +4,15 @@ import styles from "./SearchBar.module.scss";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
 import Form from "next/form";
+import { useSearchParams } from "next/navigation";
 
-export function SearchBar() {
+type SearchBarProps = {
+  initialValue: string;
+};
+
+export function SearchBar({ initialValue }: SearchBarProps) {
   const { t } = useTranslation();
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(initialValue);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -50,4 +55,12 @@ export function SearchBar() {
       </Form>
     </div>
   );
+}
+
+export function SearchBarFromUrl() {
+  const searchParams = useSearchParams();
+  const searchResult = searchParams.get("search");
+  const result = searchResult ?? "";
+
+  return <SearchBar key={result} initialValue={result} />;
 }
