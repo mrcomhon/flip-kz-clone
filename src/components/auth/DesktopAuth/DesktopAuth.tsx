@@ -37,6 +37,14 @@ export function DesktopAuth({
     }
   };
 
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (event.detail === 0 && isModalOpen) {
+      onClose();
+    } else {
+      onOpen();
+    }
+  };
+
   return (
     <div
       className={styles.desktopAuth}
@@ -47,7 +55,7 @@ export function DesktopAuth({
     >
       <button
         ref={buttonRef}
-        onClick={onOpen}
+        onClick={handleClick}
         type="button"
         className={`${styles.auth} reset-button`}
         aria-expanded={isModalOpen}
