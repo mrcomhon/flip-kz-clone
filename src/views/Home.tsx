@@ -2,10 +2,12 @@ import { ProductCatalog } from "@/components/catalog";
 import { useState } from "react";
 import { Badge } from "@/components/badge";
 import productSections from "@/data/productData";
+import { useTranslation } from "react-i18next";
 
 const CATEGORY_COUNT = productSections.length;
 
 function HomePage() {
+  const { t } = useTranslation();
   const [badges, setBadges] = useState<string[]>([]);
 
   const handleBadge = (currentBadge: string) => {
@@ -24,6 +26,7 @@ function HomePage() {
 
   return (
     <main>
+      <h1 className="visually-hidden">{t("homePage.title")}</h1>
       <Badge value={badges} onBadge={handleBadge} />
       <ProductCatalog searchQuery="" badges={badges} />
     </main>

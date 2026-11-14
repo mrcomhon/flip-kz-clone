@@ -95,6 +95,10 @@ const kk = {
     addToFavorites: "Таңдаулыларға қосу: {{name}}",
   },
 
+  homePage: {
+    title: "Тауарлар каталогы",
+  },
+
   searchPage: {
     title: '"{{query}}" сұрауы бойынша іздеу нәтижелері',
   },
