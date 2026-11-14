@@ -11,7 +11,10 @@ const title = "FlipClone — учебный клон интерфейса Flip.k
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://flip-kz-clone.vercel.app"),
-  title,
+  title: {
+    default: title,
+    template: "%s — FlipClone",
+  },
   description:
     "Учебный клон интерфейса Flip.kz: каталог товаров, поиск, фильтр по категориям и избранное. React 19, TypeScript, SCSS Modules.",
   icons: {
