@@ -72,7 +72,7 @@ export function BurgerMenu({ onClose }: BurgerMenuProps) {
               ariaLabel={t("header.burgerMenu.closeBurgerButton")}
             />
           </div>
-          <a href="#" className={styles.auth}>
+          <a href="#" className={styles.auth} onClick={onClose}>
             <img
               src={profileImg.src}
               className="img-circle"
