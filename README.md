@@ -42,6 +42,7 @@
 - Redux Toolkit и React Redux — общее состояние избранного;
 - SCSS Modules;
 - i18next и react-i18next;
+- Vitest — юнит-тесты логики;
 - ESLint;
 - SVGR;
 - React Icons;
@@ -69,14 +70,15 @@ npm run dev
 npm test
 ```
 
-Команда последовательно запускает ESLint, проверку типов TypeScript и production-сборку. Отдельных автоматических тестов поведения пока нет.
+Команда последовательно запускает ESLint, проверку типов TypeScript, юнит-тесты на Vitest и production-сборку. Тесты покрывают логику без браузера: редьюсер избранного, разбор сохранённого избранного из `localStorage` и фильтр каталога по поиску и категориям.
 
 В GitHub Actions эти же проверки запускаются при открытии и обновлении pull request в `main`, а также при push в `main`. Workflow [`.github/workflows/ci.yml`](.github/workflows/ci.yml) использует Ubuntu и Node.js 24, устанавливает зависимости через `npm ci` и выполняет `npm test`.
 
 | Команда             | Назначение                               |
 | ------------------- | ---------------------------------------- |
 | `npm run dev`       | запуск dev-сервера Next.js               |
-| `npm test`          | lint, проверка типов и сборка            |
+| `npm test`          | lint, проверка типов, тесты и сборка     |
+| `npm run test:unit` | юнит-тесты Vitest                        |
 | `npm run typecheck` | генерация типов Next.js и проверка типов |
 | `npm run lint`      | проверка кода ESLint                     |
 | `npm run build`     | production-сборка                        |
@@ -108,7 +110,7 @@ src/
 - добавить subheader;
 - создать страницы товаров;
 - добавить логику корзины и авторизации;
-- добавить автоматические тесты поведения интерфейса.
+- добавить тесты компонентов (React Testing Library) и сквозные тесты.
 
 ## Дисклеймер
 

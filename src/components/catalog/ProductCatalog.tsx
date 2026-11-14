@@ -27,7 +27,7 @@ export function ProductCatalog({ searchQuery, badges }: ProductCatalogProps) {
 
         return (
           <section className={styles.section} key={section.key}>
-            <h2 className={styles.title}>{section.name}</h2>
+            <h2 className={styles.title}>{t(`badge.${section.key}`)}</h2>
             <ul
               role="list"
               className={clsx(

@@ -93,6 +93,10 @@ const ru = {
     addToFavorites: "Добавить в избранное: {{name}}",
   },
 
+  homePage: {
+    title: "Каталог товаров",
+  },
+
   searchPage: {
     title: 'Результаты поиска по запросу: "{{query}}"',
   },

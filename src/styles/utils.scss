@@ -6,11 +6,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.darken-bg {
+body.darken-bg::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 5;
   background: rgba(0, 0, 0, 0.5);
-  transition-duration: var(--transition-duration);
+  pointer-events: none;
 }
-
 
 .reset-button {
   background: none;
