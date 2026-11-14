@@ -31,6 +31,13 @@
 
 .ulGrid {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, toRem(250)), 1fr));
+
+  @include mobile {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(100%, toRem(160)), 1fr)
+    );
+  }
 }
 
 .notFound {
