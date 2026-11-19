@@ -90,6 +90,8 @@ const ru = {
 
   product: {
     notFound: "Ничего не найдено",
+    loading: "Загрузка…",
+    error: "Не удалось загрузить товары",
     addToFavorites: "Добавить в избранное: {{name}}",
   },
 
