@@ -92,6 +92,8 @@ const kk = {
 
   product: {
     notFound: "Ештеңе табылмады",
+    loading: "Жүктелуде…",
+    error: "Тауарларды жүктеу мүмкін болмады",
     addToFavorites: "Таңдаулыларға қосу: {{name}}",
   },
 

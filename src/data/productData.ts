@@ -19,7 +19,7 @@ import smartWatch from "@/assets/products/smart-watch.webp";
 import wirelessHeadphones from "@/assets/products/wireless-headphones.webp";
 import yogaMat from "@/assets/products/yoga-mat.webp";
 
-type ProductSection = {
+export type ProductSection = {
   key: "lego" | "clothes" | "extra";
   name: string;
   items: ProductType[];
